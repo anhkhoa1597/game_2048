@@ -648,6 +648,9 @@ select {
     width: 23px;
     height: 4px;
   }
+  .page {
+    height: 90vh;
+  }
   /* .bottom-controls {
     padding: 14px;
     gap: 14px;
