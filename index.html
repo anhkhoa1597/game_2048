@@ -9,93 +9,95 @@
   <body>
     <main class="page">
       <section class="game-wrapper">
-        <header class="game-header">
-          <div class="title-menu-wrap">
-            <button class="brand-menu-button" id="menuToggle" type="button">
-              <span class="hamburger-line"></span>
-              <span class="brand-title">2048</span>
-            </button>
-
-            <nav class="side-menu hidden" id="sideMenu">
-              <div class="menu-section">
-                <label for="themeSelect">Theme</label>
-                <select id="themeSelect">
-                  <option value="classic">Classic</option>
-                  <option value="green">Green</option>
-                  <option value="dark">Dark</option>
-                </select>
-              </div>
-
-              <div class="menu-section">
-                <label for="boardSizeSelect">Board Size</label>
-                <select id="boardSizeSelect">
-                  <option value="4">4 x 4</option>
-                  <option value="5">5 x 5</option>
-                  <option value="6">6 x 6</option>
-                  <option value="8">8 x 8</option>
-                </select>
-              </div>
-
-              <button
-                class="menu-action-button"
-                id="resetCurrentBoardBtn"
-                type="button"
-              >
-                Reset Current Board
-              </button>
-            </nav>
-          </div>
-
-          <div class="score-group">
-            <div class="score-box">
-              <span class="score-label">SCORE</span>
-              <span class="score-value" id="score">0</span>
-            </div>
-
-            <div class="score-box best-box">
-              <span class="score-label">BEST</span>
-              <span class="score-value" id="best">0</span>
-            </div>
-          </div>
-
-          <div class="header-actions">
-            <button class="feedback-button" type="button">Give Feedback</button>
-            <button class="power-button" type="button" id="newGameBtn">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                x="0px"
-                y="0px"
-                width="24"
-                height="24"
-                viewBox="0,0,256,256"
-              >
-                <g
-                  fill="#ffffff"
-                  fill-rule="nonzero"
-                  stroke="none"
-                  stroke-width="1"
-                  stroke-linecap="butt"
-                  stroke-linejoin="miter"
-                  stroke-miterlimit="10"
-                  stroke-dasharray=""
-                  stroke-dashoffset="0"
-                  font-family="none"
-                  font-weight="none"
-                  font-size="none"
-                  text-anchor="none"
-                  style="mix-blend-mode: normal"
-                >
-                  <g transform="scale(10.66667,10.66667)">
-                    <path
-                      d="M2,2l2.93945,2.93945c-1.81318,1.80876 -2.93945,4.30325 -2.93945,7.06055c0,5.514 4.486,10 10,10c5.514,0 10,-4.486 10,-10c0,-5.514 -4.486,-10 -10,-10v2c4.411,0 8,3.589 8,8c0,4.411 -3.589,8 -8,8c-4.411,0 -8,-3.589 -8,-8c0,-2.20599 0.90048,-4.20272 2.34961,-5.65039l2.65039,2.65039v-7z"
-                    ></path>
-                  </g>
-                </g>
-              </svg>
-            </button>
-          </div>
-        </header>
         <div class="board-power">
+          <header class="game-header">
+            <div class="title-menu-wrap">
+              <button class="brand-menu-button" id="menuToggle" type="button">
+                <span class="hamburger-line"></span>
+                <span class="brand-title">2048</span>
+              </button>
+
+              <nav class="side-menu hidden" id="sideMenu">
+                <div class="menu-section">
+                  <label for="themeSelect">Theme</label>
+                  <select id="themeSelect">
+                    <option value="classic">Classic</option>
+                    <option value="green">Green</option>
+                    <option value="dark">Dark</option>
+                  </select>
+                </div>
+
+                <div class="menu-section">
+                  <label for="boardSizeSelect">Board Size</label>
+                  <select id="boardSizeSelect">
+                    <option value="4">4 x 4</option>
+                    <option value="5">5 x 5</option>
+                    <option value="6">6 x 6</option>
+                    <option value="8">8 x 8</option>
+                  </select>
+                </div>
+
+                <button
+                  class="menu-action-button"
+                  id="resetCurrentBoardBtn"
+                  type="button"
+                >
+                  Reset Current Board
+                </button>
+              </nav>
+            </div>
+
+            <div class="score-group">
+              <div class="score-box">
+                <span class="score-label">SCORE</span>
+                <span class="score-value" id="score">0</span>
+              </div>
+
+              <div class="score-box best-box">
+                <span class="score-label">BEST</span>
+                <span class="score-value" id="best">0</span>
+              </div>
+            </div>
+
+            <div class="header-actions">
+              <button class="feedback-button" type="button">
+                Give Feedback
+              </button>
+              <button class="power-button" type="button" id="newGameBtn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  x="0px"
+                  y="0px"
+                  width="24"
+                  height="24"
+                  viewBox="0,0,256,256"
+                >
+                  <g
+                    fill="#ffffff"
+                    fill-rule="nonzero"
+                    stroke="none"
+                    stroke-width="1"
+                    stroke-linecap="butt"
+                    stroke-linejoin="miter"
+                    stroke-miterlimit="10"
+                    stroke-dasharray=""
+                    stroke-dashoffset="0"
+                    font-family="none"
+                    font-weight="none"
+                    font-size="none"
+                    text-anchor="none"
+                    style="mix-blend-mode: normal"
+                  >
+                    <g transform="scale(10.66667,10.66667)">
+                      <path
+                        d="M2,2l2.93945,2.93945c-1.81318,1.80876 -2.93945,4.30325 -2.93945,7.06055c0,5.514 4.486,10 10,10c5.514,0 10,-4.486 10,-10c0,-5.514 -4.486,-10 -10,-10v2c4.411,0 8,3.589 8,8c0,4.411 -3.589,8 -8,8c-4.411,0 -8,-3.589 -8,-8c0,-2.20599 0.90048,-4.20272 2.34961,-5.65039l2.65039,2.65039v-7z"
+                      ></path>
+                    </g>
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </header>
           <section class="board" id="board">
             <div class="grid-container" id="gridContainer"></div>
             <div class="tile-container" id="tileContainer"></div>
@@ -221,7 +223,7 @@
         </div>
 
         <footer class="footer-text">
-          play2048.co © 2014–2026 Gabriele Cirulli. All rights reserved.
+          play2048 © 2026 Khoa ĐA. All rights reserved.
         </footer>
       </section>
     </main>
