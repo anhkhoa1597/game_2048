@@ -48,7 +48,9 @@ body.theme-dark {
 }
 
 body {
-  height: 100vh;
+  min-height: 100svh;
+  height: 100dvh;
+  overflow: hidden;
   font-family: Arial, Helvetica, sans-serif;
   background: var(--page-bg);
   color: var(--text-main);
