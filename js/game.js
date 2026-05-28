@@ -1,30 +1,34 @@
-const gridContainer = document.getElementById("gridContainer");
-const tileContainer = document.getElementById("tileContainer");
-const boardElement = document.getElementById("board");
+import {
+  applyThemeToBody,
+  clearTiles,
+  closeMenu,
+  createGridCells,
+  createTileElement,
+  deleteTileElement,
+  dom,
+  getTileElement,
+  hideMessage,
+  refreshTileClass,
+  removeTileElement,
+  setBoardSizeSelect,
+  setTilePosition,
+  showMessage,
+  updatePowerUI,
+  updateScoreUI,
+  updateTeleportTargets,
+} from "./ui.js";
 
-const scoreElement = document.getElementById("score");
-const bestElement = document.getElementById("best");
-
-const newGameBtn = document.getElementById("newGameBtn");
-const tryAgainBtn = document.getElementById("tryAgainBtn");
-const keepPlayingBtn = document.getElementById("keepPlayingBtn");
-
-const gameMessage = document.getElementById("gameMessage");
-const messageText = document.getElementById("messageText");
-
-const menuToggle = document.getElementById("menuToggle");
-const sideMenu = document.getElementById("sideMenu");
-const themeSelect = document.getElementById("themeSelect");
-const boardSizeSelect = document.getElementById("boardSizeSelect");
-const resetCurrentBoardBtn = document.getElementById("resetCurrentBoardBtn");
-
-const undoBtn = document.getElementById("undoBtn");
-const swapBtn = document.getElementById("swapBtn");
-const teleportBtn = document.getElementById("teleportBtn");
-
-const undoCount = document.getElementById("undoCount");
-const swapCount = document.getElementById("swapCount");
-const teleportCount = document.getElementById("teleportCount");
+import {
+  getCurrentBoardSize,
+  getTheme,
+  loadBestScore,
+  loadGameData,
+  removeGameData,
+  saveBestScore,
+  saveGameData,
+  setCurrentBoardSize,
+  setTheme,
+} from "./storage.js";
 
 const AVAILABLE_SIZES = [4, 5, 6, 8];
 const MAX_BOARD_SIZE = 10;
@@ -32,8 +36,8 @@ const MAX_POWER = 2;
 const ANIMATION_DURATION = 110;
 const WIN_VALUE = 2048;
 
-let boardSize = Number(localStorage.getItem("currentBoardSize2048")) || 4;
-let theme = localStorage.getItem("theme2048") || "classic";
+let boardSize = getCurrentBoardSize();
+let theme = getTheme();
 
 let tiles = [];
 let nextId = 1;
@@ -57,52 +61,19 @@ let queuedDirection = null;
 let activePower = null;
 let selectedTileId = null;
 
-let touchStartX = 0;
-let touchStartY = 0;
-
-let tileElementMap = new Map();
-
 let cachedMetrics = {
   gap: 10,
   cellSize: 94,
 };
 
-function getStorageKey(size = boardSize) {
-  return `game2048-board-${size}`;
-}
-
-function getBestStorageKey(size = boardSize) {
-  return `bestScore2048-board-${size}`;
-}
-function createGrid() {
-  document.documentElement.style.setProperty("--grid-size", boardSize);
-  gridContainer.innerHTML = "";
-
-  for (let i = 0; i < boardSize * boardSize; i++) {
-    const cell = document.createElement("div");
-    cell.className = "grid-cell";
-
-    const row = Math.floor(i / boardSize);
-    const col = i % boardSize;
-
-    cell.dataset.row = row;
-    cell.dataset.col = col;
-
-    cell.addEventListener("click", () => handleCellClick(row, col));
-
-    gridContainer.appendChild(cell);
-  }
-
-  requestAnimationFrame(() => {
-    updateCachedMetrics();
-    handleResize();
-  });
+export function getAnimationDuration() {
+  return ANIMATION_DURATION;
 }
 
 function updateCachedMetrics() {
-  const styles = getComputedStyle(boardElement);
+  const styles = getComputedStyle(dom.boardElement);
 
-  const boardWidth = boardElement.clientWidth;
+  const boardWidth = dom.boardElement.clientWidth;
   const padding = parseFloat(styles.getPropertyValue("--board-padding"));
   const gap = parseFloat(styles.getPropertyValue("--gap"));
 
@@ -141,7 +112,7 @@ function getTileClassName(tile) {
     classes.push("tile-merged");
   }
 
-  if (activePower && (activePower === "swap" || activePower === "teleport")) {
+  if (activePower === "swap" || activePower === "teleport") {
     classes.push("selectable");
   }
 
@@ -151,55 +122,24 @@ function getTileClassName(tile) {
 
   return classes.join(" ");
 }
-function createTileElement(tile) {
-  const tileElement = document.createElement("div");
-  tileElement.className = getTileClassName(tile);
-  tileElement.dataset.id = tile.id;
 
-  const { x, y } = getPixelPosition(tile.row, tile.col);
-  tileElement.style.transform = `translate3d(${x}px, ${y}px, 0)`;
-
-  tileElement.addEventListener("click", (event) => {
-    event.stopPropagation();
-    handleTileClick(tile.id);
-  });
-
-  const inner = document.createElement("div");
-  inner.className = "tile-inner";
-  inner.textContent = tile.value;
-
-  tileElement.appendChild(inner);
-  tileContainer.appendChild(tileElement);
-
-  tileElementMap.set(tile.id, tileElement);
-
-  setTimeout(() => {
-    tileElement.classList.remove("tile-new", "tile-merged");
-  }, 260);
-
-  return tileElement;
+function createTile(tile) {
+  return createTileElement(
+    tile,
+    getTileClassName(tile),
+    getPixelPosition(tile.row, tile.col),
+    handleTileClick,
+  );
 }
 
-function getTileElement(tileId) {
-  return tileElementMap.get(tileId);
-}
-
-function setTilePosition(tileElement, row, col) {
-  if (!tileElement) return;
-
-  const { x, y } = getPixelPosition(row, col);
-  tileElement.style.transform = `translate3d(${x}px, ${y}px, 0)`;
-}
 function renderAllTiles() {
-  tileContainer.innerHTML = "";
-  tileElementMap.clear();
-
+  clearTiles();
   updateCachedMetrics();
 
   tiles.forEach((tile) => {
     tile.isNew = false;
     tile.isMerged = false;
-    createTileElement(tile);
+    createTile(tile);
   });
 
   refreshTileClasses();
@@ -207,41 +147,23 @@ function renderAllTiles() {
 
 function refreshTileClasses() {
   tiles.forEach((tile) => {
-    const element = getTileElement(tile.id);
-
-    if (element) {
-      element.className = getTileClassName(tile);
-    }
+    refreshTileClass(tile, getTileClassName(tile));
   });
 
-  gridContainer.querySelectorAll(".grid-cell").forEach((cell) => {
-    cell.classList.toggle("teleport-target", activePower === "teleport");
-  });
+  updateTeleportTargets(activePower === "teleport");
 }
 
 function updateScore() {
-  scoreElement.textContent = score;
-
   if (score > bestScore) {
     bestScore = score;
-    localStorage.setItem(getBestStorageKey(), String(bestScore));
+    saveBestScore(boardSize, bestScore);
   }
 
-  bestElement.textContent = bestScore;
+  updateScoreUI(score, bestScore);
 }
 
-function updatePowerUI() {
-  undoCount.textContent = powers.undo;
-  swapCount.textContent = powers.swap;
-  teleportCount.textContent = powers.teleport;
-
-  undoBtn.disabled = powers.undo <= 0 || history.length === 0;
-  swapBtn.disabled = powers.swap <= 0;
-  teleportBtn.disabled = powers.teleport <= 0;
-
-  undoBtn.classList.toggle("active", activePower === "undo");
-  swapBtn.classList.toggle("active", activePower === "swap");
-  teleportBtn.classList.toggle("active", activePower === "teleport");
+function updatePowers() {
+  updatePowerUI(powers, history.length, activePower);
 }
 
 function createEmptyBoard() {
@@ -275,15 +197,15 @@ function getEmptyCells() {
 
 function addPower(type, amount = 1) {
   powers[type] = Math.min(MAX_POWER, powers[type] + amount);
-  updatePowerUI();
+  updatePowers();
 }
 
 function spendPower(type) {
   if (powers[type] <= 0) return false;
 
   powers[type] -= 1;
+  updatePowers();
 
-  updatePowerUI();
   return true;
 }
 
@@ -305,7 +227,7 @@ function addRandomTile() {
   };
 
   tiles.push(tile);
-  createTileElement(tile);
+  createTile(tile);
 
   tile.isNew = false;
 }
@@ -328,6 +250,8 @@ function getGameSnapshot() {
 }
 
 function applyGameSnapshot(snapshot) {
+  const currentUndo = powers.undo;
+
   tiles = snapshot.tiles.map((tile) => ({
     ...tile,
     isNew: false,
@@ -336,22 +260,22 @@ function applyGameSnapshot(snapshot) {
 
   nextId = snapshot.nextId;
   score = snapshot.score;
-  //   const currentUndo = powers.undo;
 
-  //   powers = {
-  //     ...snapshot.powers,
-  //     undo: currentUndo,
-  //   };
+  powers = {
+    ...snapshot.powers,
+    undo: currentUndo,
+  };
 
   isGameOver = snapshot.isGameOver;
   hasWon = snapshot.hasWon;
   keepPlaying = snapshot.keepPlaying;
+  queuedDirection = null;
 
   cancelPowerMode();
   hideMessage();
   renderAllTiles();
   updateScore();
-  updatePowerUI();
+  updatePowers();
 
   if (isGameOver) {
     showMessage("lose");
@@ -368,7 +292,7 @@ function pushHistory() {
   }
 }
 
-function saveGame() {
+export function saveGame() {
   const payload = {
     boardSize,
     tiles: tiles.map((tile) => ({
@@ -386,50 +310,43 @@ function saveGame() {
     keepPlaying,
   };
 
-  localStorage.setItem(getStorageKey(), JSON.stringify(payload));
+  saveGameData(boardSize, payload);
 }
 
 function loadGame(size) {
-  const raw = localStorage.getItem(getStorageKey(size));
+  const data = loadGameData(size);
 
-  if (!raw) return false;
+  if (!data || !Array.isArray(data.tiles)) return false;
 
-  try {
-    const data = JSON.parse(raw);
+  boardSize = Math.min(Number(data.boardSize) || size, MAX_BOARD_SIZE);
 
-    if (!data || !Array.isArray(data.tiles)) return false;
+  tiles = data.tiles.map((tile) => ({
+    ...tile,
+    isNew: false,
+    isMerged: false,
+  }));
 
-    boardSize = Math.min(Number(data.boardSize) || size, MAX_BOARD_SIZE);
-    tiles = data.tiles.map((tile) => ({
-      ...tile,
-      isNew: false,
-      isMerged: false,
-    }));
+  nextId = Number(data.nextId) || 1;
+  score = Number(data.score) || 0;
 
-    nextId = Number(data.nextId) || 1;
-    score = Number(data.score) || 0;
+  powers = {
+    undo: Number(data.powers?.undo) || 0,
+    swap: Number(data.powers?.swap) || 0,
+    teleport: Number(data.powers?.teleport) || 0,
+  };
 
-    powers = {
-      undo: Number(data.powers?.undo) || 0,
-      swap: Number(data.powers?.swap) || 0,
-      teleport: Number(data.powers?.teleport) || 0,
-    };
+  history = Array.isArray(data.history) ? data.history : [];
 
-    history = Array.isArray(data.history) ? data.history : [];
+  isGameOver = Boolean(data.isGameOver);
+  hasWon = Boolean(data.hasWon);
+  keepPlaying = Boolean(data.keepPlaying);
 
-    isGameOver = Boolean(data.isGameOver);
-    hasWon = Boolean(data.hasWon);
-    keepPlaying = Boolean(data.keepPlaying);
-
-    return true;
-  } catch {
-    return false;
-  }
+  return true;
 }
 
-function startNewGame({ clearSaved = false } = {}) {
+export function startNewGame({ clearSaved = false } = {}) {
   if (clearSaved) {
-    localStorage.removeItem(getStorageKey());
+    removeGameData(boardSize);
   }
 
   tiles = [];
@@ -451,31 +368,31 @@ function startNewGame({ clearSaved = false } = {}) {
 
   cancelPowerMode();
   hideMessage();
+  clearTiles();
 
-  tileContainer.innerHTML = "";
-  tileElementMap.clear();
+  updateCachedMetrics();
 
   addRandomTile();
   addRandomTile();
 
   updateScore();
-  updatePowerUI();
+  updatePowers();
   saveGame();
 }
 
-function loadOrCreateGame() {
-  localStorage.setItem("currentBoardSize2048", String(boardSize));
+export function loadOrCreateGame() {
+  setCurrentBoardSize(boardSize);
 
-  bestScore = Number(localStorage.getItem(getBestStorageKey())) || 0;
+  bestScore = loadBestScore(boardSize);
 
-  createGrid();
+  createGridCells(boardSize, handleCellClick);
 
   const loaded = loadGame(boardSize);
 
   if (loaded) {
     renderAllTiles();
     updateScore();
-    updatePowerUI();
+    updatePowers();
 
     if (isGameOver) {
       showMessage("lose");
@@ -486,23 +403,11 @@ function loadOrCreateGame() {
     startNewGame();
   }
 
-  boardSizeSelect.value = String(boardSize);
-}
+  setBoardSizeSelect(boardSize);
 
-function showMessage(type) {
-  gameMessage.classList.remove("hidden");
-
-  if (type === "win") {
-    messageText.textContent = "You win!";
-    keepPlayingBtn.style.display = "inline-block";
-  } else {
-    messageText.textContent = "Game Over!";
-    keepPlayingBtn.style.display = "none";
-  }
-}
-
-function hideMessage() {
-  gameMessage.classList.add("hidden");
+  requestAnimationFrame(() => {
+    handleResize();
+  });
 }
 
 function buildLines(direction) {
@@ -631,7 +536,7 @@ function prepareMove(direction) {
   };
 }
 
-function move(direction) {
+export function move(direction) {
   if (isGameOver) return;
   if (hasWon && !keepPlaying) return;
   if (activePower) return;
@@ -653,9 +558,10 @@ function move(direction) {
   result.moves.forEach((moveItem) => {
     const tileElement = getTileElement(moveItem.tile.id);
 
-    if (tileElement) {
-      setTilePosition(tileElement, moveItem.toRow, moveItem.toCol);
-    }
+    setTilePosition(
+      tileElement,
+      getPixelPosition(moveItem.toRow, moveItem.toCol),
+    );
 
     moveItem.tile.row = moveItem.toRow;
     moveItem.tile.col = moveItem.toCol;
@@ -675,13 +581,7 @@ function finishMove(result) {
   });
 
   mergedIds.forEach((id) => {
-    const element = getTileElement(id);
-
-    if (element) {
-      element.remove();
-    }
-
-    tileElementMap.delete(id);
+    removeTileElement(id);
   });
 
   tiles = tiles.filter((tile) => !mergedIds.has(tile.id));
@@ -697,7 +597,7 @@ function finishMove(result) {
     };
 
     tiles.push(newTile);
-    createTileElement(newTile);
+    createTile(newTile);
 
     newTile.isMerged = false;
 
@@ -774,19 +674,20 @@ function canMove() {
   return false;
 }
 
-function undoMove() {
-  if (isAnimating || isGameOver) return;
+export function undoMove() {
+  if (isAnimating) return;
   if (powers.undo <= 0) return;
   if (history.length === 0) return;
 
   spendPower("undo");
+
   const snapshot = history.pop();
   applyGameSnapshot(snapshot);
 
   saveGame();
 }
 
-function setActivePower(powerName) {
+export function setActivePower(powerName) {
   if (isAnimating || isGameOver) return;
 
   if (activePower === powerName) {
@@ -800,15 +701,15 @@ function setActivePower(powerName) {
   selectedTileId = null;
 
   hideMessage();
-  updatePowerUI();
+  updatePowers();
   refreshTileClasses();
 }
 
-function cancelPowerMode() {
+export function cancelPowerMode() {
   activePower = null;
   selectedTileId = null;
 
-  updatePowerUI();
+  updatePowers();
   refreshTileClasses();
 }
 
@@ -865,11 +766,14 @@ function handleSwapTileClick(tileId) {
   secondTile.row = firstPosition.row;
   secondTile.col = firstPosition.col;
 
-  setTilePosition(getTileElement(firstTile.id), firstTile.row, firstTile.col);
+  setTilePosition(
+    getTileElement(firstTile.id),
+    getPixelPosition(firstTile.row, firstTile.col),
+  );
+
   setTilePosition(
     getTileElement(secondTile.id),
-    secondTile.row,
-    secondTile.col,
+    getPixelPosition(secondTile.row, secondTile.col),
   );
 
   spendPower("swap");
@@ -913,11 +817,7 @@ function handleCellClick(row, col) {
   tile.row = row;
   tile.col = col;
 
-  const element = getTileElement(tile.id);
-
-  if (element) {
-    setTilePosition(element, row, col);
-  }
+  setTilePosition(getTileElement(tile.id), getPixelPosition(row, col));
 
   spendPower("teleport");
   cancelPowerMode();
@@ -933,104 +833,25 @@ function handleCellClick(row, col) {
   }, ANIMATION_DURATION);
 }
 
-function handleKeydown(event) {
-  if (event.key === "Escape") {
-    cancelPowerMode();
-    sideMenu.classList.add("hidden");
-    return;
-  }
-
-  const keyMap = {
-    ArrowUp: "up",
-    ArrowDown: "down",
-    ArrowLeft: "left",
-    ArrowRight: "right",
-
-    w: "up",
-    s: "down",
-    a: "left",
-    d: "right",
-
-    W: "up",
-    S: "down",
-    A: "left",
-    D: "right",
-
-    i: "up",
-    k: "down",
-    j: "left",
-    l: "right",
-
-    I: "up",
-    K: "down",
-    J: "left",
-    L: "right",
-  };
-
-  const direction = keyMap[event.key];
-
-  if (!direction) return;
-
-  event.preventDefault();
-  move(direction);
-}
-
-function handleTouchStart(event) {
-  const touch = event.touches[0];
-
-  touchStartX = touch.clientX;
-  touchStartY = touch.clientY;
-}
-
-function handleTouchEnd(event) {
-  const touch = event.changedTouches[0];
-
-  const deltaX = touch.clientX - touchStartX;
-  const deltaY = touch.clientY - touchStartY;
-
-  const absX = Math.abs(deltaX);
-  const absY = Math.abs(deltaY);
-
-  const minSwipeDistance = 30;
-
-  if (Math.max(absX, absY) < minSwipeDistance) {
-    return;
-  }
-
-  if (absX > absY) {
-    move(deltaX > 0 ? "right" : "left");
-  } else {
-    move(deltaY > 0 ? "down" : "up");
-  }
-}
-
-function handleResize() {
+export function handleResize() {
   updateCachedMetrics();
 
   tiles.forEach((tile) => {
-    const tileElement = getTileElement(tile.id);
-    setTilePosition(tileElement, tile.row, tile.col);
+    setTilePosition(
+      getTileElement(tile.id),
+      getPixelPosition(tile.row, tile.col),
+    );
   });
 }
 
-function applyTheme(nextTheme) {
+export function applyTheme(nextTheme) {
   theme = nextTheme;
 
-  document.body.classList.remove("theme-green", "theme-dark");
-
-  if (theme === "green") {
-    document.body.classList.add("theme-green");
-  }
-
-  if (theme === "dark") {
-    document.body.classList.add("theme-dark");
-  }
-
-  localStorage.setItem("theme2048", theme);
-  themeSelect.value = theme;
+  applyThemeToBody(theme);
+  setTheme(theme);
 }
 
-function changeBoardSize(nextSize) {
+export function changeBoardSize(nextSize) {
   const parsedSize = Number(nextSize);
 
   if (!AVAILABLE_SIZES.includes(parsedSize)) return;
@@ -1039,77 +860,22 @@ function changeBoardSize(nextSize) {
   saveGame();
 
   boardSize = parsedSize;
-  localStorage.setItem("currentBoardSize2048", String(boardSize));
+  setCurrentBoardSize(boardSize);
 
   cancelPowerMode();
   hideMessage();
-  tileContainer.innerHTML = "";
+  clearTiles();
 
   loadOrCreateGame();
 }
 
-createGrid();
-applyTheme(theme);
-loadOrCreateGame();
-
-window.addEventListener("keydown", handleKeydown);
-window.addEventListener("resize", handleResize);
-
-boardElement.addEventListener("touchstart", handleTouchStart, {
-  passive: true,
-});
-
-boardElement.addEventListener("touchend", handleTouchEnd, {
-  passive: true,
-});
-
-newGameBtn.addEventListener("click", () => {
-  const isConfirm = confirm("Start new game?");
-  if (isConfirm) startNewGame({ clearSaved: true });
-});
-
-tryAgainBtn.addEventListener("click", () => {
-  startNewGame({ clearSaved: true });
-});
-
-keepPlayingBtn.addEventListener("click", () => {
+export function keepPlayingAfterWin() {
   keepPlaying = true;
   hideMessage();
   saveGame();
-});
+}
 
-menuToggle.addEventListener("click", () => {
-  sideMenu.classList.toggle("hidden");
-});
-
-themeSelect.addEventListener("change", (event) => {
-  applyTheme(event.target.value);
-});
-
-boardSizeSelect.addEventListener("change", (event) => {
-  changeBoardSize(event.target.value);
-});
-
-resetCurrentBoardBtn.addEventListener("click", () => {
-  startNewGame({ clearSaved: true });
-  sideMenu.classList.add("hidden");
-});
-
-undoBtn.addEventListener("click", undoMove);
-
-swapBtn.addEventListener("click", () => {
-  setActivePower("swap");
-});
-
-teleportBtn.addEventListener("click", () => {
-  setActivePower("teleport");
-});
-
-document.addEventListener("click", (event) => {
-  const clickedInsideMenu =
-    sideMenu.contains(event.target) || menuToggle.contains(event.target);
-
-  if (!clickedInsideMenu) {
-    sideMenu.classList.add("hidden");
-  }
-});
+export function initGame() {
+  applyTheme(theme);
+  loadOrCreateGame();
+}

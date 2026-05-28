@@ -251,22 +251,6 @@ select {
   cursor: pointer;
 }
 
-.new-game-button {
-  border: none;
-  background: var(--button-bg);
-  color: #fff;
-  font-size: 18px;
-  padding: 13px 22px;
-  border-radius: 10px;
-  cursor: pointer;
-  box-shadow: 0 4px 0 var(--button-shadow);
-}
-
-.new-game-button:active {
-  transform: translateY(2px);
-  box-shadow: 0 2px 0 var(--button-shadow);
-}
-
 .board-power {
   flex: 1;
   display: flex;
@@ -528,12 +512,6 @@ select {
   cursor: not-allowed;
 }
 
-.power-icon {
-  font-size: 20px;
-  font-weight: 900;
-  line-height: 1;
-}
-
 .power-count {
   position: absolute;
   right: -10px;
@@ -585,6 +563,7 @@ select {
   }
   .score-group {
     grid-area: score;
+    
   }
   .header-actions {
     grid-area: new;
@@ -605,11 +584,6 @@ select {
   .feedback-button {
     display: none;
   }
-
-  /* .side-menu {
-    left: 50%;
-    transform: translateX(-50%);
-  } */
 
   .board {
     border-radius: 5px;
