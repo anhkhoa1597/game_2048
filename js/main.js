@@ -82,7 +82,7 @@ function handleKeydown(event) {
 
   if (event.key === "e" || event.key === "E") {
     const board = getBoardValues();
-    const aiMove = getExpectimaxMove(board, 2);
+    const aiMove = getExpectimaxMove(board);
 
     console.log("Expectimax AI move:", aiMove);
 
@@ -146,7 +146,7 @@ function toggleAutoPlay() {
 
   autoPlayTimer = setInterval(() => {
     const board = getBoardValues();
-    const aiMove = getExpectimaxMove(board, 2);
+    const aiMove = getExpectimaxMove(board);
 
     if (!aiMove) {
       clearInterval(autoPlayTimer);

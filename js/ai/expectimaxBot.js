@@ -23,7 +23,13 @@ export function getExpectimaxMove(board, depth = 2) {
 
     const score =
       evaluateBoard(moveResult.board, moveResult.scoreGained) +
-      expectChanceNode(moveResult.board, depth - 1, randomOptions);
+      // expectChanceNode(moveResult.board, depth - 1, randomOptions);
+      expectMaxNode(moveResult.board, depth - 1, randomOptions);
+
+    console.log(direction, {
+      score,
+      board: moveResult.board,
+    });
 
     if (score > bestScore) {
       bestScore = score;
