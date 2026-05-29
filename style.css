@@ -208,6 +208,7 @@ select {
 }
 
 .score-box {
+  border: none;
   padding: 10px;
   border-radius: 14px;
   background: #eee9dd;
@@ -306,7 +307,7 @@ select {
   width: var(--cell-size);
   height: var(--cell-size);
   border-radius: 8px;
-  transition: transform 200ms ease-out;
+  transition: transform 100ms ease-out;
   will-change: transform;
   pointer-events: auto;
 }
@@ -563,7 +564,6 @@ select {
   }
   .score-group {
     grid-area: score;
-    
   }
   .header-actions {
     grid-area: new;

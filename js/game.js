@@ -180,6 +180,15 @@ function getBoardFromTiles() {
   return board;
 }
 
+export function getBoardValues() {
+  const board = Array.from({ length: boardSize }, () =>
+    Array(boardSize).fill(0),
+  );
+
+  tiles.forEach((tile) => (board[tile.row][tile.col] = tile.value));
+  return board;
+}
+
 function getEmptyCells() {
   const board = getBoardFromTiles();
   const emptyCells = [];
