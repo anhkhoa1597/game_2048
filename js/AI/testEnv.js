@@ -4,10 +4,10 @@ import {
   printTileDistributions,
 } from "./benchmarkBots.js";
 
-const BOTS_TO_TEST = ["depth2", "expectimaxBot"];
+const BOTS_TO_TEST = ["expectimaxBot3"];
 
 const results = benchmarkBots(BOTS_TO_TEST, {
-  games: 100,
+  games: 2,
   size: 4,
   maxSteps: 10000,
 });

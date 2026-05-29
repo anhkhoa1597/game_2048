@@ -20,6 +20,9 @@ function getBotMove(botName, board) {
     case "expectimaxBot":
       return getExpectimaxMove(board, 2);
 
+    case "expectimax3":
+    case "expectimaxBot3":
+      return getExpectimaxMove(board, 3);
     default:
       throw new Error(`Unknown bot name: ${botName}`);
   }
