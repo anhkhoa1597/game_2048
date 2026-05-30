@@ -8,8 +8,9 @@ import {
 const DEFAULT_SIZE = 4;
 
 export class Env2048 {
-  constructor(size = DEFAULT_SIZE) {
+  constructor(size = DEFAULT_SIZE, options = {}) {
     this.size = size;
+    this.random = options.random || Math.random;
     this.board = this.createEmptyBoard();
     this.score = 0;
     this.done = false;
@@ -94,9 +95,9 @@ export class Env2048 {
 
     if (emptyCells.length === 0) return;
 
-    const randomIndex = Math.floor(Math.random() * emptyCells.length);
+    const randomIndex = Math.floor(this.random() * emptyCells.length);
     const cell = emptyCells[randomIndex];
 
-    this.board[cell.row][cell.col] = Math.random() < 0.9 ? 2 : 4;
+    this.board[cell.row][cell.col] = this.random() < 0.9 ? 2 : 4;
   }
 }

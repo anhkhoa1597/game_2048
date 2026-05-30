@@ -1,6 +1,7 @@
 import { Env2048 } from "./env2048.js";
 import { getMaxTile } from "./evaluator.js";
 import { getBotMove } from "./botRegistry.js";
+import { createSeededRandom } from "./random.js";
 
 export function playOneGame(botName, options = {}) {
   const { size = 4, maxSteps = 10000 } = options;
@@ -48,18 +49,21 @@ export function benchmarkBot(botName, options = {}) {
     size = 4,
     maxSteps = 10000,
     logEachGame = false,
+    seed = null,
   } = options;
 
   const results = [];
 
   const startTime = performance.now();
-
   for (let i = 0; i < games; i++) {
+    const gameRandom =
+      seed === null ? Math.random : createSeededRandom(seed + i);
     const gameStartTime = performance.now();
 
     const gameResult = playOneGame(botName, {
       size,
       maxSteps,
+      random: gameRandom,
     });
 
     const gameEndTime = performance.now();

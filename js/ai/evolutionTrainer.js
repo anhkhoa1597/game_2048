@@ -63,6 +63,11 @@ function evaluateWeights(weights, options = {}) {
   const totalSteps = results.reduce((sum, game) => sum + game.steps, 0);
   const winCount = results.filter((game) => game.win).length;
   const maxTile = Math.max(...results.map((game) => game.maxTile));
+  const count2048 = results.filter((game) => game.maxTile >= 2048).length;
+  const count4096 = results.filter((game) => game.maxTile >= 4096).length;
+
+  const rate2048 = count2048 / gamesPerCandidate;
+  const rate4096 = count4096 / gamesPerCandidate;
 
   const averageScore = totalScore / gamesPerCandidate;
   const averageSteps = totalSteps / gamesPerCandidate;
@@ -70,9 +75,10 @@ function evaluateWeights(weights, options = {}) {
 
   const fitness =
     averageScore +
-    winRate * 10000 +
+    rate2048 * 25000 +
+    rate4096 * 50000 +
     Math.log2(maxTile) * 1000 +
-    averageSteps * 2;
+    averageSteps * 0.8;
 
   return {
     weights: cloneWeights(weights),

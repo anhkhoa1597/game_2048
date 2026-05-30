@@ -1,18 +1,20 @@
 import {
-  getRandomTileBoards,
+  getDirectionalRandomTileBoards,
   getValidMoves,
   simulateMove,
 } from "./boardSimulator.js";
 
 import { evaluateBoard } from "./evaluator.js";
-export function getExpectimaxMove(board, depth = 2, options = {}) {
+
+const SEARCH_DEPTH = 2;
+const GAME_OVER_PENALTY = 100000;
+
+export function getExpectimaxMove(board) {
   const validMoves = getValidMoves(board);
 
   if (validMoves.length === 0) {
     return null;
   }
-
-  const randomOptions = options.randomOptions || getRandomOptions(board);
 
   let bestMove = null;
   let bestScore = -Infinity;
@@ -21,12 +23,9 @@ export function getExpectimaxMove(board, depth = 2, options = {}) {
     const moveResult = simulateMove(board, direction);
 
     const score =
-      evaluateBoard(moveResult.board, moveResult.scoreGained) +
-      expectChanceNode(moveResult.board, depth - 1, randomOptions);
-    // console.log(direction, {
-    //   score,
-    //   board: moveResult.board,
-    // });
+      moveResult.scoreGained +
+      expectChanceNode(moveResult.board, SEARCH_DEPTH - 1, direction);
+
     if (score > bestScore) {
       bestScore = score;
       bestMove = direction;
@@ -36,7 +35,7 @@ export function getExpectimaxMove(board, depth = 2, options = {}) {
   return bestMove;
 }
 
-function expectMaxNode(board, depth, randomOptions) {
+function expectMaxNode(board, depth) {
   if (depth <= 0) {
     return evaluateBoard(board, 0);
   }
@@ -44,7 +43,7 @@ function expectMaxNode(board, depth, randomOptions) {
   const validMoves = getValidMoves(board);
 
   if (validMoves.length === 0) {
-    return evaluateBoard(board, 0) - 100000;
+    return evaluateBoard(board, 0) - GAME_OVER_PENALTY;
   }
 
   let bestScore = -Infinity;
@@ -53,8 +52,8 @@ function expectMaxNode(board, depth, randomOptions) {
     const moveResult = simulateMove(board, direction);
 
     const score =
-      evaluateBoard(moveResult.board, moveResult.scoreGained) +
-      expectChanceNode(moveResult.board, depth - 1, randomOptions);
+      moveResult.scoreGained +
+      expectChanceNode(moveResult.board, depth - 1, direction);
 
     if (score > bestScore) {
       bestScore = score;
@@ -64,42 +63,19 @@ function expectMaxNode(board, depth, randomOptions) {
   return bestScore;
 }
 
-function expectChanceNode(board, depth, randomOptions) {
-  const outcomes = getRandomTileBoards(board, randomOptions);
+function expectChanceNode(board, depth, lastMoveDirection) {
+  const outcomes = getDirectionalRandomTileBoards(board, lastMoveDirection);
 
   if (outcomes.length === 0) {
-    return expectMaxNode(board, depth, randomOptions);
+    return expectMaxNode(board, depth);
   }
 
   let expectedScore = 0;
 
   for (const outcome of outcomes) {
-    const score = expectMaxNode(outcome.board, depth, randomOptions);
-
+    const score = expectMaxNode(outcome.board, depth);
     expectedScore += score * outcome.probability;
   }
 
   return expectedScore;
-}
-
-function getRandomOptions(board) {
-  const size = board.length;
-
-  if (size <= 4) {
-    return {
-      mode: "full",
-    };
-  }
-
-  if (size <= 6) {
-    return {
-      mode: "sample",
-      limit: 8,
-    };
-  }
-
-  return {
-    mode: "sample",
-    limit: 6,
-  };
 }

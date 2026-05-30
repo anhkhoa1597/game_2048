@@ -1,0 +1,4 @@
+bot,seeds,games,size,averageScore,maxScore,averageSteps,maxTile,winCount,winRate,totalTimeMs,averageTimeMs,averageMoveMs
+trainedV1,5,2500,4x4,20661,71784,1123,4096,1081,43.24,370655,148,0.132
+trainedV2,5,2500,4x4,21471,71536,1159,4096,1160,46.4,390066,156,0.135
+trainedV3,5,2500,4x4,20755,71308,1126,4096,1097,43.88,382952,153,0.136

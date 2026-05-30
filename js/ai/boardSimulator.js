@@ -274,3 +274,133 @@ export function getValidMoves(board) {
 export function isMoveValid(board, direction) {
   return simulateMove(board, direction).moved;
 }
+export function getDirectionalRandomTileBoards(board, direction) {
+  const selectedCells = getRepresentativeEmptyCells(board, direction);
+
+  if (selectedCells.length === 0) {
+    return [];
+  }
+
+  const tileOptions = [
+    { value: 2, probability: 0.9 },
+    { value: 4, probability: 0.1 },
+  ];
+
+  const outcomes = [];
+  const probabilityPerCell = 1 / selectedCells.length;
+
+  for (const cell of selectedCells) {
+    for (const tile of tileOptions) {
+      const newBoard = cloneBoard(board);
+
+      newBoard[cell.row][cell.col] = tile.value;
+
+      outcomes.push({
+        board: newBoard,
+        probability: probabilityPerCell * tile.probability,
+        tileValue: tile.value,
+        row: cell.row,
+        col: cell.col,
+      });
+    }
+  }
+
+  return outcomes;
+}
+
+function getRepresentativeEmptyCells(board, direction) {
+  const size = board.length;
+  const cells = [];
+  const usedCells = new Set();
+
+  function addCell(row, col) {
+    const key = `${row}-${col}`;
+
+    if (!usedCells.has(key)) {
+      usedCells.add(key);
+      cells.push({ row, col });
+    }
+  }
+
+  if (direction === "left") {
+    for (let row = 0; row < size; row++) {
+      const emptyCols = [];
+
+      for (let col = 0; col < size; col++) {
+        if (board[row][col] === 0) {
+          emptyCols.push(col);
+        }
+      }
+
+      if (emptyCols.length > 0) {
+        const firstEmptyCol = emptyCols[0];
+        const edgeEmptyCol = emptyCols[emptyCols.length - 1];
+
+        addCell(row, firstEmptyCol);
+        addCell(row, edgeEmptyCol);
+      }
+    }
+  }
+
+  if (direction === "right") {
+    for (let row = 0; row < size; row++) {
+      const emptyCols = [];
+
+      for (let col = size - 1; col >= 0; col--) {
+        if (board[row][col] === 0) {
+          emptyCols.push(col);
+        }
+      }
+
+      if (emptyCols.length > 0) {
+        const firstEmptyCol = emptyCols[0];
+        const edgeEmptyCol = emptyCols[emptyCols.length - 1];
+
+        addCell(row, firstEmptyCol);
+        addCell(row, edgeEmptyCol);
+      }
+    }
+  }
+
+  if (direction === "up") {
+    for (let col = 0; col < size; col++) {
+      const emptyRows = [];
+
+      for (let row = 0; row < size; row++) {
+        if (board[row][col] === 0) {
+          emptyRows.push(row);
+        }
+      }
+
+      if (emptyRows.length > 0) {
+        const firstEmptyRow = emptyRows[0];
+        const edgeEmptyRow = emptyRows[emptyRows.length - 1];
+
+        addCell(firstEmptyRow, col);
+        addCell(edgeEmptyRow, col);
+      }
+    }
+  }
+
+  if (direction === "down") {
+    for (let col = 0; col < size; col++) {
+      const emptyRows = [];
+
+      for (let row = size - 1; row >= 0; row--) {
+        if (board[row][col] === 0) {
+          emptyRows.push(row);
+        }
+      }
+
+      if (emptyRows.length > 0) {
+        const firstEmptyRow = emptyRows[0];
+        const edgeEmptyRow = emptyRows[emptyRows.length - 1];
+
+        addCell(firstEmptyRow, col);
+        addCell(edgeEmptyRow, col);
+      }
+    }
+  }
+
+  return cells;
+}

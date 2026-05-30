@@ -20,28 +20,17 @@ let touchStartY = 0;
 let autoPlayTimer = null;
 let isAutoPlaying = false;
 
-let currentBotName = BOT_NAMES.AUTO_STRONG;
+let currentBotName = BOT_NAMES.CHAMPION;
 function getAutoPlayDelay(botName) {
-  if (botName === BOT_NAMES.EXPECTIMAX_STRONG) {
-    return 180;
-  }
-
-  if (botName === BOT_NAMES.FAST) {
-    return 140;
-  }
-
-  if (botName === BOT_NAMES.DEPTH_2) {
-    return 80;
-  }
-  if (botName === BOT_NAMES.AUTO_STRONG) {
-    return 180;
-  }
-
   if (botName === BOT_NAMES.AUTO_FAST) {
     return 60;
   }
 
-  return 140;
+  if (botName === BOT_NAMES.AUTO_STRONG || botName === BOT_NAMES.CHAMPION) {
+    return 100;
+  }
+
+  return 100;
 }
 function handleKeydown(event) {
   if (event.key === "Escape") {
@@ -242,7 +231,7 @@ let disableStep = "score";
 function enableSecretMode() {
   secretModeEnabled = true;
   console.log("Secret mode enabled!");
-  startAutoPlay(BOT_NAMES.AUTO_STRONG);
+  startAutoPlay(BOT_NAMES.CHAMPION);
 }
 
 function disableSecretMode() {
