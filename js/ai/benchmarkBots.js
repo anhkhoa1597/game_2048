@@ -24,6 +24,9 @@ export function formatBenchmarkSummary(summary) {
     maxTile: summary.maxTile,
     winCount: summary.winCount,
     winRate: `${summary.winRate.toFixed(2)}%`,
+    totalTimeMs: Math.round(summary.totalTimeMs),
+    averageTimeMs: Math.round(summary.averageTimeMs),
+    averageMoveMs: Number(summary.averageMoveMs.toFixed(3)),
   };
 }
 

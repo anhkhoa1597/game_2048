@@ -1,32 +1,6 @@
 import { Env2048 } from "./env2048.js";
-import { getDepthMove } from "./depthBot.js";
-import { getExpectimaxMove } from "./expectimaxBot.js";
-import { getHeuristicMove } from "./heuristicBot.js";
 import { getMaxTile } from "./evaluator.js";
-
-function getBotMove(botName, board) {
-  switch (botName) {
-    case "depth2":
-      return getDepthMove(board, 2);
-
-    case "depth3":
-      return getDepthMove(board, 3);
-
-    case "heuristic":
-    case "heuristicBot":
-      return getHeuristicMove(board);
-
-    case "expectimax":
-    case "expectimaxBot":
-      return getExpectimaxMove(board, 2);
-
-    case "expectimax3":
-    case "expectimaxBot3":
-      return getExpectimaxMove(board, 3);
-    default:
-      throw new Error(`Unknown bot name: ${botName}`);
-  }
-}
+import { getBotMove } from "./botRegistry.js";
 
 export function playOneGame(botName, options = {}) {
   const { size = 4, maxSteps = 10000 } = options;
@@ -78,20 +52,34 @@ export function benchmarkBot(botName, options = {}) {
 
   const results = [];
 
+  const startTime = performance.now();
+
   for (let i = 0; i < games; i++) {
+    const gameStartTime = performance.now();
+
     const gameResult = playOneGame(botName, {
       size,
       maxSteps,
     });
 
+    const gameEndTime = performance.now();
+    const gameTimeMs = gameEndTime - gameStartTime;
+
+    gameResult.timeMs = gameTimeMs;
+    gameResult.averageMoveMs =
+      gameResult.steps > 0 ? gameTimeMs / gameResult.steps : 0;
+
     results.push(gameResult);
 
     if (logEachGame) {
       console.log(
-        `[${botName}] Game ${i + 1}/${games} finished | score: ${gameResult.score} | steps: ${gameResult.steps} | maxTile: ${gameResult.maxTile} | win: ${gameResult.win}`,
+        `[${botName}] ${i + 1}/${games} | score=${gameResult.score} | steps=${gameResult.steps} | maxTile=${gameResult.maxTile} | win=${gameResult.win} | time=${gameResult.timeMs.toFixed(1)}ms`,
       );
     }
   }
+
+  const endTime = performance.now();
+  const totalTimeMs = endTime - startTime;
 
   const totalScore = results.reduce((sum, game) => sum + game.score, 0);
   const totalSteps = results.reduce((sum, game) => sum + game.steps, 0);
@@ -104,6 +92,9 @@ export function benchmarkBot(botName, options = {}) {
 
   const winCount = results.filter((game) => game.win).length;
   const winRate = (winCount / games) * 100;
+
+  const averageTimeMs = totalTimeMs / games;
+  const averageMoveMs = totalSteps > 0 ? totalTimeMs / totalSteps : 0;
 
   const tileDistribution = {};
 
@@ -121,6 +112,9 @@ export function benchmarkBot(botName, options = {}) {
     maxTile,
     winCount,
     winRate,
+    totalTimeMs,
+    averageTimeMs,
+    averageMoveMs,
     tileDistribution,
     rawResults: results,
   };

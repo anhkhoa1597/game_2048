@@ -14,86 +14,53 @@ import {
   undoMove,
 } from "./game.js";
 
-import { getSmartMove } from "./ai/smartBot.js";
-import { getLookaheadMove } from "./ai/lookaheadBot.js";
-import { getDepthMove } from "./ai/depthBot.js";
-import { getHeuristicMove } from "./ai/heuristicBot.js";
-import { getExpectimaxMove } from "./ai/expectimaxBot.js";
-
+import { getBotMove, BOT_NAMES } from "./ai/botRegistry.js";
 let touchStartX = 0;
 let touchStartY = 0;
 let autoPlayTimer = null;
 let isAutoPlaying = false;
 
+let currentBotName = BOT_NAMES.AUTO_STRONG;
+function getAutoPlayDelay(botName) {
+  if (botName === BOT_NAMES.EXPECTIMAX_STRONG) {
+    return 180;
+  }
+
+  if (botName === BOT_NAMES.FAST) {
+    return 140;
+  }
+
+  if (botName === BOT_NAMES.DEPTH_2) {
+    return 80;
+  }
+  if (botName === BOT_NAMES.AUTO_STRONG) {
+    return 100;
+  }
+
+  if (botName === BOT_NAMES.AUTO_FAST) {
+    return 60;
+  }
+
+  return 140;
+}
 function handleKeydown(event) {
   if (event.key === "Escape") {
     cancelPowerMode();
     closeMenu();
     return;
   }
-  if (event.key === "b" || event.key === "B") {
-    const board = getBoardValues();
-    const aiMove = getSmartMove(board);
-    console.log("AI move:", aiMove);
 
-    if (aiMove) {
-      move(aiMove);
-    }
-
-    return;
-  }
-  if (event.key === "v" || event.key === "V") {
-    const board = getBoardValues();
-    const aiMove = getLookaheadMove(board);
-
-    console.log("Lookahead AI move:", aiMove);
-
-    if (aiMove) {
-      move(aiMove);
-    }
-
-    return;
-  }
-  if (event.key === "g" || event.key === "G") {
-    const board = getBoardValues();
-    const aiMove = getDepthMove(board, 3);
-
-    console.log("Depth AI move:", aiMove);
-
-    if (aiMove) {
-      move(aiMove);
-    }
-
+  if (event.key === "f" || event.key === "F") {
+    toggleAutoPlay(BOT_NAMES.AUTO_FAST);
     return;
   }
 
-  if (event.key === "h" || event.key === "H") {
-    const board = getBoardValues();
-    const aiMove = getHeuristicMove(board);
-
-    console.log("Heuristic AI move:", aiMove);
-
-    if (aiMove) {
-      move(aiMove);
-    }
-
-    return;
-  }
-
-  if (event.key === "e" || event.key === "E") {
-    const board = getBoardValues();
-    const aiMove = getExpectimaxMove(board);
-
-    console.log("Expectimax AI move:", aiMove);
-
-    if (aiMove) {
-      move(aiMove);
-    }
-
-    return;
-  }
   if (event.key === "m" || event.key === "M") {
-    toggleAutoPlay();
+    toggleAutoPlay(BOT_NAMES.AUTO_STRONG);
+    return;
+  }
+  if (event.key === "x" || event.key === "X") {
+    stopAutoPlay();
     return;
   }
 
@@ -132,32 +99,50 @@ function handleKeydown(event) {
   move(direction);
 }
 
-function toggleAutoPlay() {
+function startAutoPlay(botName = currentBotName) {
+  currentBotName = botName;
+
   if (isAutoPlaying) {
-    clearInterval(autoPlayTimer);
-    autoPlayTimer = null;
-    isAutoPlaying = false;
-    console.log("Auto play stopped");
-    return;
+    stopAutoPlay();
   }
 
+  const delay = getAutoPlayDelay(currentBotName);
+
   isAutoPlaying = true;
-  console.log("Auto play started");
+
+  console.log(`Auto play started: ${currentBotName}, delay=${delay}ms`);
 
   autoPlayTimer = setInterval(() => {
     const board = getBoardValues();
-    const aiMove = getExpectimaxMove(board);
+    const aiMove = getBotMove(currentBotName, board);
 
     if (!aiMove) {
-      clearInterval(autoPlayTimer);
-      autoPlayTimer = null;
-      isAutoPlaying = false;
+      stopAutoPlay();
       console.log("Auto play stopped: no valid moves");
       return;
     }
 
     move(aiMove);
-  }, 180);
+  }, delay);
+}
+
+function stopAutoPlay() {
+  if (autoPlayTimer) {
+    clearInterval(autoPlayTimer);
+    autoPlayTimer = null;
+  }
+
+  isAutoPlaying = false;
+  console.log("Auto play stopped");
+}
+
+function toggleAutoPlay(botName = currentBotName) {
+  if (isAutoPlaying && currentBotName === botName) {
+    stopAutoPlay();
+    return;
+  }
+
+  startAutoPlay(botName);
 }
 
 function handleTouchStart(event) {
@@ -257,12 +242,13 @@ let disableStep = "score";
 function enableSecretMode() {
   secretModeEnabled = true;
   console.log("Secret mode enabled!");
-  toggleAutoPlay();
+  startAutoPlay(BOT_NAMES.AUTO_STRONG);
 }
+
 function disableSecretMode() {
   secretModeEnabled = false;
   console.log("Secret mode disabled!");
-  toggleAutoPlay();
+  stopAutoPlay();
 }
 
 function resetEnableSequence() {

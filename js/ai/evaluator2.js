@@ -1,3 +1,6 @@
+const TARGET_CORNER = "bottom-left";
+const SNAKE_AXIS = "vertical";
+
 export function countEmptyCells(board) {
   let count = 0;
 
@@ -24,16 +27,6 @@ export function getMaxTile(board) {
   }
 
   return maxTile;
-}
-
-export function getMaxTilePower(board) {
-  const maxTile = getMaxTile(board);
-
-  if (maxTile === 0) {
-    return 0;
-  }
-
-  return Math.log2(maxTile);
 }
 
 export function isMaxTileInCorner(board) {
@@ -144,163 +137,154 @@ export function countMergePotential(board) {
 
   return mergeCount;
 }
-
 export function calculateCornerGradientScore(board) {
   const size = board.length;
   const maxTile = getMaxTile(board);
 
   if (maxTile === 0) return 0;
 
-  const corners = [
-    { row: 0, col: 0 },
-    { row: 0, col: size - 1 },
-    { row: size - 1, col: 0 },
-    { row: size - 1, col: size - 1 },
-  ];
+  const corner = {
+    row: size - 1,
+    col: 0,
+  };
 
-  let bestScore = -Infinity;
+  let score = 0;
 
-  for (const corner of corners) {
-    if (board[corner.row][corner.col] !== maxTile) {
-      continue;
-    }
-
-    let score = 0;
-
-    for (let row = 0; row < size; row++) {
-      for (let col = 0; col < size; col++) {
-        const value = board[row][col];
-
-        if (value === 0) continue;
-
-        const distanceFromCorner =
-          Math.abs(row - corner.row) + Math.abs(col - corner.col);
-
-        const tilePower = Math.log2(value);
-        const weight = Math.pow(0.5, distanceFromCorner);
-
-        score += tilePower * weight;
-      }
-    }
-
-    if (score > bestScore) {
-      bestScore = score;
-    }
-  }
-
-  if (bestScore === -Infinity) {
-    return 0;
-  }
-
-  return bestScore;
-}
-
-export function calculateSnakeScore(board) {
-  const size = board.length;
-
-  const patterns = buildSnakePatterns(size);
-  let bestScore = -Infinity;
-
-  for (const pattern of patterns) {
-    let score = 0;
-
-    for (let index = 0; index < pattern.length; index++) {
-      const { row, col } = pattern[index];
+  for (let row = 0; row < size; row++) {
+    for (let col = 0; col < size; col++) {
       const value = board[row][col];
 
       if (value === 0) continue;
 
+      const distanceFromCorner =
+        Math.abs(row - corner.row) + Math.abs(col - corner.col);
+
       const tilePower = Math.log2(value);
-      const weight = pattern.length - index;
+      const weight = Math.pow(0.5, distanceFromCorner);
 
       score += tilePower * weight;
     }
-
-    bestScore = Math.max(bestScore, score);
   }
 
-  return bestScore;
+  return score;
 }
 
-function buildSnakePatterns(size) {
-  return [
-    buildSnakePattern(size, "top-left"),
-    buildSnakePattern(size, "top-right"),
-    buildSnakePattern(size, "bottom-left"),
-    buildSnakePattern(size, "bottom-right"),
-  ];
+export function isMaxTileAtTargetCorner(board) {
+  const maxTile = getMaxTile(board);
+  const last = board.length - 1;
+
+  return board[last][0] === maxTile;
 }
 
-function buildSnakePattern(size, corner) {
-  const rows = [...Array(size).keys()];
-  const cols = [...Array(size).keys()];
-
-  if (corner.startsWith("bottom")) {
-    rows.reverse();
-  }
-
+export function buildFixedSnakePattern(size) {
   const pattern = [];
 
-  for (let rowIndex = 0; rowIndex < size; rowIndex++) {
-    const row = rows[rowIndex];
+  if (TARGET_CORNER === "bottom-left" && SNAKE_AXIS === "vertical") {
+    for (let col = 0; col < size; col++) {
+      const rows = [...Array(size).keys()];
 
-    let currentCols = [...cols];
+      if (col % 2 === 0) {
+        rows.reverse(); // dưới lên
+      }
 
-    const shouldReverse =
-      (corner.endsWith("left") && rowIndex % 2 === 1) ||
-      (corner.endsWith("right") && rowIndex % 2 === 0);
-
-    if (shouldReverse) {
-      currentCols.reverse();
-    }
-
-    for (const col of currentCols) {
-      pattern.push({ row, col });
+      for (const row of rows) {
+        pattern.push({ row, col });
+      }
     }
   }
 
   return pattern;
 }
 
-export function extractBoardFeatures(board, scoreGained = 0) {
-  const emptyCells = countEmptyCells(board);
-  const maxTile = getMaxTile(board);
-  const maxTilePower = maxTile === 0 ? 0 : Math.log2(maxTile);
-  const maxTileInCorner = isMaxTileInCorner(board);
+export function calculateFixedSnakeScore(board) {
+  const pattern = buildFixedSnakePattern(board.length);
+  let score = 0;
 
-  return {
-    emptyCells,
-    scoreGained,
-    maxTile,
-    maxTilePower,
-    maxTileInCorner: maxTileInCorner ? 1 : 0,
-    maxTileNotInCorner: maxTileInCorner ? 0 : 1,
-    smoothness: calculateSmoothness(board),
-    monotonicity: calculateMonotonicity(board),
-    mergePotential: countMergePotential(board),
-    cornerGradient: calculateCornerGradientScore(board),
-    snakeScore: calculateSnakeScore(board),
-  };
+  for (let index = 0; index < pattern.length; index++) {
+    const { row, col } = pattern[index];
+    const value = board[row][col];
+
+    if (value === 0) continue;
+
+    const tilePower = Math.log2(value);
+    const weight = pattern.length - index;
+
+    score += tilePower * weight;
+  }
+
+  return score;
 }
 
+export function calculateTopTilesSnakePenalty(board, topCount = 6) {
+  const pattern = buildFixedSnakePattern(board.length);
+
+  const tiles = [];
+
+  for (let row = 0; row < board.length; row++) {
+    for (let col = 0; col < board[row].length; col++) {
+      const value = board[row][col];
+
+      if (value !== 0) {
+        tiles.push({ value, row, col });
+      }
+    }
+  }
+
+  tiles.sort((a, b) => b.value - a.value);
+
+  const topTiles = tiles.slice(0, topCount);
+
+  let penalty = 0;
+
+  for (let i = 0; i < topTiles.length; i++) {
+    const tile = topTiles[i];
+    const expectedPosition = pattern[i];
+
+    const distance =
+      Math.abs(tile.row - expectedPosition.row) +
+      Math.abs(tile.col - expectedPosition.col);
+
+    penalty += Math.log2(tile.value) * distance;
+  }
+
+  return penalty;
+}
 export function evaluateBoard(board, scoreGained = 0) {
-  const f = extractBoardFeatures(board, scoreGained);
+  const emptyCells = countEmptyCells(board);
+  const maxTile = getMaxTile(board);
+  const maxTileInCorner = isMaxTileInCorner(board);
+  const smoothness = calculateSmoothness(board);
+  const monotonicity = calculateMonotonicity(board);
+  const mergePotential = countMergePotential(board);
+  const cornerGradient = calculateCornerGradientScore(board);
+  const fixedSnakeScore = calculateFixedSnakeScore(board);
+  const maxAtTargetCorner = isMaxTileAtTargetCorner(board);
+  const topTilesSnakePenalty = calculateTopTilesSnakePenalty(board, 8);
 
   let boardScore = 0;
 
-  boardScore += f.emptyCells * 100;
-  boardScore += f.scoreGained * 1.2;
-  boardScore += f.maxTile * 0.2;
-  boardScore += f.cornerGradient * 120;
-  boardScore += f.smoothness * 8;
-  boardScore += f.monotonicity * 4;
-  boardScore += f.mergePotential * 60;
-  boardScore += f.snakeScore * 6;
+  boardScore += emptyCells * 100;
+  boardScore += scoreGained * 1.2;
+  boardScore += maxTile * 0.2;
 
-  if (f.maxTileInCorner) {
-    boardScore += f.maxTile * 6;
+  boardScore += cornerGradient * 120;
+  boardScore += smoothness * 8;
+  boardScore += monotonicity * 4;
+  boardScore += mergePotential * 60;
+
+  boardScore += fixedSnakeScore * 25;
+  boardScore -= topTilesSnakePenalty * 300;
+
+  if (maxAtTargetCorner) {
+    boardScore += maxTile * 20;
   } else {
-    boardScore -= f.maxTile * 3;
+    boardScore -= maxTile * 50;
+  }
+
+  if (maxTileInCorner) {
+    boardScore += maxTile * 6;
+  } else {
+    boardScore -= maxTile * 3;
   }
 
   return boardScore;

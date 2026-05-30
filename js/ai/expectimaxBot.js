@@ -5,15 +5,14 @@ import {
 } from "./boardSimulator.js";
 
 import { evaluateBoard } from "./evaluator.js";
-
-export function getExpectimaxMove(board, depth = 2) {
+export function getExpectimaxMove(board, depth = 2, options = {}) {
   const validMoves = getValidMoves(board);
 
   if (validMoves.length === 0) {
     return null;
   }
 
-  const randomOptions = getRandomOptions(board);
+  const randomOptions = options.randomOptions || getRandomOptions(board);
 
   let bestMove = null;
   let bestScore = -Infinity;
@@ -23,14 +22,11 @@ export function getExpectimaxMove(board, depth = 2) {
 
     const score =
       evaluateBoard(moveResult.board, moveResult.scoreGained) +
-      // expectChanceNode(moveResult.board, depth - 1, randomOptions);
-      expectMaxNode(moveResult.board, depth - 1, randomOptions);
-
-    console.log(direction, {
-      score,
-      board: moveResult.board,
-    });
-
+      expectChanceNode(moveResult.board, depth - 1, randomOptions);
+    // console.log(direction, {
+    //   score,
+    //   board: moveResult.board,
+    // });
     if (score > bestScore) {
       bestScore = score;
       bestMove = direction;
