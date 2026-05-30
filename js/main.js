@@ -34,7 +34,7 @@ function getAutoPlayDelay(botName) {
     return 80;
   }
   if (botName === BOT_NAMES.AUTO_STRONG) {
-    return 100;
+    return 180;
   }
 
   if (botName === BOT_NAMES.AUTO_FAST) {
