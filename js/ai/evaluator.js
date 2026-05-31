@@ -1,3 +1,37 @@
+const LOG2_CACHE = {
+  0: 0,
+  2: 1,
+  4: 2,
+  8: 3,
+  16: 4,
+  32: 5,
+  64: 6,
+  128: 7,
+  256: 8,
+  512: 9,
+  1024: 10,
+  2048: 11,
+  4096: 12,
+  8192: 13,
+  16384: 14,
+  32768: 15,
+  65536: 16,
+};
+
+function getTilePower(value) {
+  return LOG2_CACHE[value] ?? Math.log2(value);
+}
+
+const SNAKE_PATTERNS_BY_SIZE = new Map();
+
+function getSnakePatterns(size) {
+  if (!SNAKE_PATTERNS_BY_SIZE.has(size)) {
+    SNAKE_PATTERNS_BY_SIZE.set(size, buildSnakePatterns(size));
+  }
+
+  return SNAKE_PATTERNS_BY_SIZE.get(size);
+}
+
 export function countEmptyCells(board) {
   let count = 0;
 
@@ -33,7 +67,7 @@ export function getMaxTilePower(board) {
     return 0;
   }
 
-  return Math.log2(maxTile);
+  return getTilePower(maxTile);
 }
 
 export function isMaxTileInCorner(board) {
@@ -63,11 +97,11 @@ export function calculateSmoothness(board) {
       const down = row + 1 < board.length ? board[row + 1][col] : 0;
 
       if (right !== 0) {
-        penalty += Math.abs(Math.log2(current) - Math.log2(right));
+        penalty += Math.abs(getTilePower(current) - getTilePower(right));
       }
 
       if (down !== 0) {
-        penalty += Math.abs(Math.log2(current) - Math.log2(down));
+        penalty += Math.abs(getTilePower(current) - getTilePower(down));
       }
     }
   }
@@ -84,9 +118,9 @@ export function calculateMonotonicity(board) {
     let decreasing = 0;
 
     for (let col = 0; col < board.length - 1; col++) {
-      const current = board[row][col] === 0 ? 0 : Math.log2(board[row][col]);
+      const current = board[row][col] === 0 ? 0 : getTilePower(board[row][col]);
       const next =
-        board[row][col + 1] === 0 ? 0 : Math.log2(board[row][col + 1]);
+        board[row][col + 1] === 0 ? 0 : getTilePower(board[row][col + 1]);
 
       if (current > next) {
         decreasing += current - next;
@@ -103,9 +137,9 @@ export function calculateMonotonicity(board) {
     let decreasing = 0;
 
     for (let row = 0; row < board.length - 1; row++) {
-      const current = board[row][col] === 0 ? 0 : Math.log2(board[row][col]);
+      const current = board[row][col] === 0 ? 0 : getTilePower(board[row][col]);
       const next =
-        board[row + 1][col] === 0 ? 0 : Math.log2(board[row + 1][col]);
+        board[row + 1][col] === 0 ? 0 : getTilePower(board[row + 1][col]);
 
       if (current > next) {
         decreasing += current - next;
@@ -176,7 +210,7 @@ export function calculateCornerGradientScore(board) {
         const distanceFromCorner =
           Math.abs(row - corner.row) + Math.abs(col - corner.col);
 
-        const tilePower = Math.log2(value);
+        const tilePower = getTilePower(value);
         const weight = Math.pow(0.5, distanceFromCorner);
 
         score += tilePower * weight;
@@ -198,7 +232,7 @@ export function calculateCornerGradientScore(board) {
 export function calculateSnakeScore(board) {
   const size = board.length;
 
-  const patterns = buildSnakePatterns(size);
+  const patterns = getSnakePatterns(size);
   let bestScore = -Infinity;
 
   for (const pattern of patterns) {
@@ -210,7 +244,7 @@ export function calculateSnakeScore(board) {
 
       if (value === 0) continue;
 
-      const tilePower = Math.log2(value);
+      const tilePower = getTilePower(value);
       const weight = pattern.length - index;
 
       score += tilePower * weight;
@@ -265,7 +299,7 @@ function buildSnakePattern(size, corner) {
 export function extractBoardFeatures(board, scoreGained = 0) {
   const emptyCells = countEmptyCells(board);
   const maxTile = getMaxTile(board);
-  const maxTilePower = maxTile === 0 ? 0 : Math.log2(maxTile);
+  const maxTilePower = maxTile === 0 ? 0 : getTilePower(maxTile);
   const maxTileInCorner = isMaxTileInCorner(board);
 
   return {

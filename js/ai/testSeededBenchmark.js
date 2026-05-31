@@ -6,14 +6,13 @@ import {
 } from "./seededBenchmark.js";
 import { saveBenchmarkReport } from "./benchmarkReporter.js";
 const BOTS_TO_TEST = [
-  BOT_NAMES.TRAINED_V1,
-  BOT_NAMES.TRAINED_V2,
-  BOT_NAMES.TRAINED_V3,
+  BOT_NAMES.CHAMPION_BEAM_3,
+  BOT_NAMES.CHAMPION_DEPTH_3,
 ];
 
 const summaries = runMultiSeedBenchmark(BOTS_TO_TEST, {
-  seeds: [10001, 20002, 30003, 40004, 50005],
-  gamesPerSeed: 500,
+  seeds: [1111, 2222, 3333, 4444, 5555],
+  gamesPerSeed: 2000,
   size: 4,
   maxSteps: 10000,
   logEachSeed: true,

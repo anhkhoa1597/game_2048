@@ -4,9 +4,9 @@ import { getBotMove } from "./botRegistry.js";
 import { createSeededRandom } from "./random.js";
 
 export function playOneGame(botName, options = {}) {
-  const { size = 4, maxSteps = 10000 } = options;
+  const { size = 4, maxSteps = 10000, random = Math.random } = options;
 
-  const env = new Env2048(size);
+  const env = new Env2048(size, { random });
   let state = env.reset();
 
   let steps = 0;
