@@ -27,10 +27,10 @@ function getAutoPlayDelay(botName) {
   }
 
   if (botName === BOT_NAMES.AUTO_STRONG || botName === BOT_NAMES.CHAMPION) {
-    return 100;
+    return 180;
   }
 
-  return 100;
+  return 60;
 }
 function handleKeydown(event) {
   if (event.key === "Escape") {
@@ -45,7 +45,7 @@ function handleKeydown(event) {
   }
 
   if (event.key === "m" || event.key === "M") {
-    toggleAutoPlay(BOT_NAMES.AUTO_STRONG);
+    toggleAutoPlay(BOT_NAMES.CHAMPION);
     return;
   }
   if (event.key === "x" || event.key === "X") {
