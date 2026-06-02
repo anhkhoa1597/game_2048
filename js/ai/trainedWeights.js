@@ -54,4 +54,22 @@ export const TRAINED_WEIGHTS_V4 = {
   maxTileNotInCorner: -5.663405293553576,
 };
 
-export const CHAMPION_WEIGHTS = TRAINED_WEIGHTS_V4;
+export const TRAINED_WEIGHTS_V5 = {
+  emptyCells: 47.795637908719065,
+  scoreGained: 5.961067969203998,
+  maxTile: 0.13673886177088343,
+  maxTilePower: 0,
+  cornerGradient: 330.89236389589286,
+  smoothness: 10.099467807797696,
+  monotonicity: 2.364159537144779,
+  mergePotential: 62.78044443898324,
+  snakeScore: 1.3772789867359745,
+  maxTileInCorner: 13.819086388648634,
+  maxTileNotInCorner: -4.562083335061389,
+  snakeGapPenalty: 0,
+  snakeBreakPenalty: 0,
+  badTilePenalty: 0,
+  recoveryMergeScore: 0,
+};
+
+export const CHAMPION_WEIGHTS = TRAINED_WEIGHTS_V5;

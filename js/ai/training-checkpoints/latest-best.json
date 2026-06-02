@@ -1,162 +1,222 @@
 {
-  "savedAt": "2026-05-31T14:37:55.526Z",
+  "savedAt": "2026-06-01T15:01:48.979Z",
   "metadata": {
     "reason": "periodic-save",
-    "generation": 60,
-    "generations": 60,
-    "populationSize": 18,
-    "eliteCount": 5,
-    "gamesPerCandidate": 20,
+    "generation": 80,
+    "generations": 80,
+    "populationSize": 24,
+    "eliteCount": 6,
+    "gamesPerCandidate": 30,
     "size": 4,
     "depth": 3,
     "searchMode": "beam",
     "beamWidth": 2,
-    "mutationRate": 0.18,
-    "mutationStrength": 0.1,
-    "strongMutationChance": 0.25,
-    "strongMutationRate": 0.45,
-    "strongMutationStrength": 0.28
+    "mutationRate": 0.1,
+    "mutationStrength": 0.05,
+    "strongMutationChance": 0.12,
+    "strongMutationRate": 0.25,
+    "strongMutationStrength": 0.12
   },
   "best": {
     "weights": {
-      "emptyCells": 61.87242717872799,
-      "scoreGained": 5.590985631301941,
-      "maxTile": 0.14955492139501173,
+      "emptyCells": 47.795637908719065,
+      "scoreGained": 5.961067969203998,
+      "maxTile": 0.13673886177088343,
       "maxTilePower": 0,
-      "cornerGradient": 331.5278665184505,
-      "smoothness": 7.226323618448215,
-      "monotonicity": 3.0278381411026607,
-      "mergePotential": 71.33549851675367,
-      "snakeScore": 1.6880310966172967,
-      "maxTileInCorner": 11.905847742992265,
-      "maxTileNotInCorner": -5.663405293553576
+      "cornerGradient": 330.89236389589286,
+      "smoothness": 10.099467807797696,
+      "monotonicity": 2.364159537144779,
+      "mergePotential": 62.78044443898324,
+      "snakeScore": 1.3772789867359745,
+      "maxTileInCorner": 13.819086388648634,
+      "maxTileNotInCorner": -4.562083335061389
     },
-    "fitness": 81225.6,
-    "averageScore": 35316.8,
-    "averageSteps": 1761,
+    "fitness": 84922.81333333334,
+    "averageScore": 33909.73333333333,
+    "averageSteps": 1688.4666666666667,
     "maxTile": 4096,
-    "winCount": 16,
-    "winRate": 0.8,
+    "winCount": 20,
+    "winRate": 0.6666666666666666,
     "results": [
       {
-        "score": 78764,
-        "steps": 3605,
+        "score": 16880,
+        "steps": 1015,
+        "maxTile": 1024,
+        "win": false
+      },
+      {
+        "score": 35096,
+        "steps": 1802,
+        "maxTile": 2048,
+        "win": true
+      },
+      {
+        "score": 31564,
+        "steps": 1599,
+        "maxTile": 2048,
+        "win": true
+      },
+      {
+        "score": 15880,
+        "steps": 926,
+        "maxTile": 1024,
+        "win": false
+      },
+      {
+        "score": 59720,
+        "steps": 2760,
         "maxTile": 4096,
         "win": true
       },
       {
-        "score": 60416,
-        "steps": 2808,
+        "score": 7472,
+        "steps": 504,
+        "maxTile": 512,
+        "win": false
+      },
+      {
+        "score": 16200,
+        "steps": 958,
+        "maxTile": 1024,
+        "win": false
+      },
+      {
+        "score": 35392,
+        "steps": 1827,
+        "maxTile": 2048,
+        "win": true
+      },
+      {
+        "score": 7904,
+        "steps": 547,
+        "maxTile": 512,
+        "win": false
+      },
+      {
+        "score": 58204,
+        "steps": 2695,
         "maxTile": 4096,
         "win": true
       },
       {
-        "score": 36528,
-        "steps": 1925,
+        "score": 36272,
+        "steps": 1873,
         "maxTile": 2048,
         "win": true
       },
       {
-        "score": 36228,
-        "steps": 1884,
-        "maxTile": 2048,
-        "win": true
+        "score": 16892,
+        "steps": 1000,
+        "maxTile": 1024,
+        "win": false
       },
       {
-        "score": 34828,
-        "steps": 1793,
-        "maxTile": 2048,
-        "win": true
-      },
-      {
-        "score": 36164,
-        "steps": 1857,
-        "maxTile": 2048,
-        "win": true
-      },
-      {
-        "score": 60356,
-        "steps": 2796,
+        "score": 67040,
+        "steps": 3011,
         "maxTile": 4096,
         "win": true
       },
       {
-        "score": 59336,
-        "steps": 2728,
-        "maxTile": 4096,
-        "win": true
-      },
-      {
-        "score": 32512,
-        "steps": 1670,
+        "score": 27176,
+        "steps": 1415,
         "maxTile": 2048,
         "win": true
       },
       {
-        "score": 51856,
+        "score": 15980,
+        "steps": 936,
+        "maxTile": 1024,
+        "win": false
+      },
+      {
+        "score": 51532,
+        "steps": 2353,
+        "maxTile": 4096,
+        "win": true
+      },
+      {
+        "score": 16180,
+        "steps": 957,
+        "maxTile": 1024,
+        "win": false
+      },
+      {
+        "score": 12208,
+        "steps": 734,
+        "maxTile": 1024,
+        "win": false
+      },
+      {
+        "score": 12192,
+        "steps": 723,
+        "maxTile": 1024,
+        "win": false
+      },
+      {
+        "score": 32876,
+        "steps": 1681,
+        "maxTile": 2048,
+        "win": true
+      },
+      {
+        "score": 26652,
+        "steps": 1377,
+        "maxTile": 2048,
+        "win": true
+      },
+      {
+        "score": 58820,
+        "steps": 2689,
+        "maxTile": 4096,
+        "win": true
+      },
+      {
+        "score": 51500,
         "steps": 2376,
         "maxTile": 4096,
         "win": true
       },
       {
-        "score": 7232,
-        "steps": 507,
-        "maxTile": 512,
-        "win": false
+        "score": 60064,
+        "steps": 2804,
+        "maxTile": 4096,
+        "win": true
       },
       {
-        "score": 27276,
-        "steps": 1422,
+        "score": 58568,
+        "steps": 2670,
+        "maxTile": 4096,
+        "win": true
+      },
+      {
+        "score": 32236,
+        "steps": 1651,
         "maxTile": 2048,
         "win": true
       },
       {
-        "score": 32464,
-        "steps": 1663,
+        "score": 60080,
+        "steps": 2765,
+        "maxTile": 4096,
+        "win": true
+      },
+      {
+        "score": 35300,
+        "steps": 1840,
         "maxTile": 2048,
         "win": true
       },
       {
-        "score": 36640,
-        "steps": 1907,
+        "score": 34896,
+        "steps": 1806,
         "maxTile": 2048,
         "win": true
       },
       {
-        "score": 3200,
-        "steps": 264,
-        "maxTile": 256,
-        "win": false
-      },
-      {
-        "score": 15568,
-        "steps": 912,
-        "maxTile": 1024,
-        "win": false
-      },
-      {
-        "score": 27116,
-        "steps": 1404,
+        "score": 26516,
+        "steps": 1360,
         "maxTile": 2048,
         "win": true
-      },
-      {
-        "score": 34476,
-        "steps": 1766,
-        "maxTile": 2048,
-        "win": true
-      },
-      {
-        "score": 32756,
-        "steps": 1684,
-        "maxTile": 2048,
-        "win": true
-      },
-      {
-        "score": 2620,
-        "steps": 249,
-        "maxTile": 128,
-        "win": false
       }
     ]
   }

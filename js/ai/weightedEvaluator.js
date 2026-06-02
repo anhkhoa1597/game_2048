@@ -12,6 +12,10 @@ export const DEFAULT_WEIGHTS = {
   snakeScore: 6,
   maxTileInCorner: 6,
   maxTileNotInCorner: -3,
+  snakeGapPenalty: 8,
+  snakeBreakPenalty: 10,
+  badTilePenalty: 10,
+  recoveryMergeScore: 12,
 };
 
 export function evaluateBoardWithWeights(

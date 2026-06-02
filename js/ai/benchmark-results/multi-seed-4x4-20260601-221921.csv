@@ -1,0 +1,3 @@
+bot,seeds,games,size,averageScore,maxScore,averageSteps,maxTile,winCount,winRate,totalTimeMs,averageTimeMs,averageMoveMs
+trainedBeam3V5,2,1000,4x4,24973,74932,1313,4096,600,60,397492,397,0.303
+championBeam3,2,1000,4x4,23951,80460,1263,4096,523,52.3,381101,381,0.302

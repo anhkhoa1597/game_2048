@@ -24,7 +24,7 @@ export function runMultiSeedBenchmark(botNames, options = {}) {
       games: gamesPerSeed,
       size,
       maxSteps,
-      logEachGame: false,
+      logEachGame: true,
       seed,
     });
 

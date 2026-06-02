@@ -1,0 +1,7372 @@
+{
+  "createdAt": "2026-06-01T17:25:31.057Z",
+  "summary": [
+    {
+      "bot": "flatDepth3",
+      "seeds": 2,
+      "games": 100,
+      "size": "4x4",
+      "averageScore": 1850,
+      "maxScore": 5020,
+      "averageSteps": 174,
+      "maxTile": 512,
+      "winCount": 0,
+      "winRate": 0,
+      "totalTimeMs": 16238,
+      "averageTimeMs": 162,
+      "averageMoveMs": 0.931
+    },
+    {
+      "bot": "championDepth3",
+      "seeds": 2,
+      "games": 100,
+      "size": "4x4",
+      "averageScore": 25325,
+      "maxScore": 65520,
+      "averageSteps": 1332,
+      "maxTile": 4096,
+      "winCount": 58,
+      "winRate": 58,
+      "totalTimeMs": 37987,
+      "averageTimeMs": 380,
+      "averageMoveMs": 0.285
+    }
+  ],
+  "details": [
+    {
+      "botName": "flatDepth3",
+      "seeds": 2,
+      "games": 100,
+      "size": 4,
+      "averageScore": 1849.88,
+      "maxScore": 5020,
+      "averageSteps": 174.41,
+      "maxTile": 512,
+      "winCount": 0,
+      "winRate": 0,
+      "totalTimeMs": 16237.964668,
+      "averageTimeMs": 162.37964668,
+      "averageMoveMs": 0.9310225714121897,
+      "tileDistribution": {
+        "64": 12,
+        "128": 52,
+        "256": 35,
+        "512": 1
+      },
+      "seedResults": [
+        {
+          "botName": "flatDepth3",
+          "games": 50,
+          "size": 4,
+          "averageScore": 1956.16,
+          "maxScore": 5020,
+          "averageSteps": 182.48,
+          "maxTile": 512,
+          "winCount": 0,
+          "winRate": 0,
+          "totalTimeMs": 8628.156908,
+          "averageTimeMs": 172.56313816000002,
+          "averageMoveMs": 0.945655075405524,
+          "tileDistribution": {
+            "64": 5,
+            "128": 26,
+            "256": 18,
+            "512": 1
+          },
+          "rawResults": [
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 2432,
+              "steps": 206,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  16,
+                  32,
+                  2,
+                  4
+                ],
+                [
+                  4,
+                  8,
+                  4,
+                  2
+                ],
+                [
+                  64,
+                  32,
+                  16,
+                  8
+                ],
+                [
+                  256,
+                  2,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 238.27857699999998,
+              "averageMoveMs": 1.1566921213592232
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1668,
+              "steps": 172,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  32,
+                  128,
+                  64,
+                  2
+                ],
+                [
+                  4,
+                  32,
+                  8,
+                  32
+                ],
+                [
+                  2,
+                  16,
+                  32,
+                  8
+                ],
+                [
+                  16,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 152.79990199999997,
+              "averageMoveMs": 0.8883715232558138
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 2268,
+              "steps": 202,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  4,
+                  16,
+                  4,
+                  8
+                ],
+                [
+                  32,
+                  8,
+                  32,
+                  16
+                ],
+                [
+                  256,
+                  16,
+                  8,
+                  4
+                ],
+                [
+                  16,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 193.44873500000006,
+              "averageMoveMs": 0.9576670049504953
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1440,
+              "steps": 149,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ],
+                [
+                  32,
+                  16,
+                  8,
+                  4
+                ],
+                [
+                  4,
+                  32,
+                  16,
+                  8
+                ],
+                [
+                  128,
+                  64,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 140.09069799999997,
+              "averageMoveMs": 0.9402060268456374
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1248,
+              "steps": 136,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  16,
+                  8,
+                  4,
+                  2
+                ],
+                [
+                  128,
+                  16,
+                  32,
+                  16
+                ],
+                [
+                  32,
+                  8,
+                  16,
+                  4
+                ],
+                [
+                  2,
+                  16,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 116.92760599999997,
+              "averageMoveMs": 0.8597618088235292
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 3908,
+              "steps": 332,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  4,
+                  8,
+                  32
+                ],
+                [
+                  4,
+                  16,
+                  32,
+                  64
+                ],
+                [
+                  16,
+                  32,
+                  64,
+                  2
+                ],
+                [
+                  4,
+                  64,
+                  128,
+                  256
+                ]
+              ],
+              "timeMs": 312.770624,
+              "averageMoveMs": 0.9420801927710843
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 2808,
+              "steps": 244,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  32,
+                  16,
+                  4,
+                  2
+                ],
+                [
+                  8,
+                  64,
+                  16,
+                  4
+                ],
+                [
+                  64,
+                  2,
+                  32,
+                  8
+                ],
+                [
+                  8,
+                  256,
+                  8,
+                  16
+                ]
+              ],
+              "timeMs": 227.58465,
+              "averageMoveMs": 0.9327239754098361
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 2904,
+              "steps": 252,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  32,
+                  64,
+                  256,
+                  16
+                ],
+                [
+                  8,
+                  16,
+                  32,
+                  64
+                ],
+                [
+                  4,
+                  8,
+                  16,
+                  32
+                ],
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ]
+              ],
+              "timeMs": 237.23629400000004,
+              "averageMoveMs": 0.9414138650793652
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1024,
+              "steps": 116,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  16,
+                  8,
+                  4,
+                  2
+                ],
+                [
+                  8,
+                  2,
+                  8,
+                  4
+                ],
+                [
+                  16,
+                  8,
+                  16,
+                  8
+                ],
+                [
+                  128,
+                  16,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 111.51462900000001,
+              "averageMoveMs": 0.9613330086206898
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1452,
+              "steps": 148,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  32,
+                  16,
+                  4
+                ],
+                [
+                  32,
+                  16,
+                  2,
+                  16
+                ],
+                [
+                  128,
+                  64,
+                  8,
+                  4
+                ]
+              ],
+              "timeMs": 137.59970699999985,
+              "averageMoveMs": 0.929727749999999
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1360,
+              "steps": 144,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  8,
+                  128,
+                  32,
+                  4
+                ],
+                [
+                  2,
+                  64,
+                  16,
+                  8
+                ],
+                [
+                  8,
+                  16,
+                  8,
+                  4
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 134.6017109999998,
+              "averageMoveMs": 0.9347341041666652
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1340,
+              "steps": 140,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  64,
+                  128,
+                  8
+                ],
+                [
+                  8,
+                  4,
+                  8,
+                  16
+                ],
+                [
+                  2,
+                  32,
+                  16,
+                  4
+                ],
+                [
+                  8,
+                  2,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 132.59380599999986,
+              "averageMoveMs": 0.9470986142857133
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 2608,
+              "steps": 218,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  16,
+                  8,
+                  4
+                ],
+                [
+                  16,
+                  64,
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  256,
+                  64,
+                  32
+                ]
+              ],
+              "timeMs": 204.06742799999984,
+              "averageMoveMs": 0.9360891192660543
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1736,
+              "steps": 173,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  32,
+                  64,
+                  128,
+                  2
+                ],
+                [
+                  2,
+                  8,
+                  64,
+                  8
+                ],
+                [
+                  32,
+                  16,
+                  8,
+                  4
+                ],
+                [
+                  16,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 165.69005900000002,
+              "averageMoveMs": 0.957746005780347
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 3984,
+              "steps": 330,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  256,
+                  128,
+                  16,
+                  4
+                ],
+                [
+                  128,
+                  32,
+                  64,
+                  8
+                ],
+                [
+                  32,
+                  16,
+                  8,
+                  4
+                ],
+                [
+                  16,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 313.6421210000003,
+              "averageMoveMs": 0.9504306696969707
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1636,
+              "steps": 176,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  4,
+                  8,
+                  4
+                ],
+                [
+                  4,
+                  8,
+                  16,
+                  32
+                ],
+                [
+                  8,
+                  16,
+                  32,
+                  64
+                ],
+                [
+                  16,
+                  32,
+                  128,
+                  2
+                ]
+              ],
+              "timeMs": 160.54518699999971,
+              "averageMoveMs": 0.9121885624999984
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1272,
+              "steps": 135,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  16,
+                  8,
+                  4
+                ],
+                [
+                  16,
+                  8,
+                  4,
+                  2
+                ],
+                [
+                  128,
+                  64,
+                  8,
+                  4
+                ],
+                [
+                  4,
+                  2,
+                  16,
+                  8
+                ]
+              ],
+              "timeMs": 127.37056299999995,
+              "averageMoveMs": 0.9434856518518515
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1728,
+              "steps": 180,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  128,
+                  64,
+                  16
+                ],
+                [
+                  4,
+                  64,
+                  16,
+                  8
+                ],
+                [
+                  8,
+                  16,
+                  32,
+                  2
+                ],
+                [
+                  2,
+                  4,
+                  2,
+                  16
+                ]
+              ],
+              "timeMs": 180.90205300000025,
+              "averageMoveMs": 1.005011405555557
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 3024,
+              "steps": 248,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  4,
+                  16,
+                  2
+                ],
+                [
+                  4,
+                  16,
+                  8,
+                  4
+                ],
+                [
+                  16,
+                  128,
+                  64,
+                  8
+                ],
+                [
+                  8,
+                  256,
+                  4,
+                  16
+                ]
+              ],
+              "timeMs": 220.00306600000022,
+              "averageMoveMs": 0.8871091370967751
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 2456,
+              "steps": 207,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  32,
+                  16,
+                  4
+                ],
+                [
+                  64,
+                  256,
+                  4,
+                  16
+                ],
+                [
+                  8,
+                  32,
+                  8,
+                  4
+                ],
+                [
+                  2,
+                  16,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 190.33117300000004,
+              "averageMoveMs": 0.9194742657004833
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 780,
+              "steps": 106,
+              "maxTile": 64,
+              "win": false,
+              "board": [
+                [
+                  4,
+                  8,
+                  64,
+                  16
+                ],
+                [
+                  8,
+                  16,
+                  32,
+                  8
+                ],
+                [
+                  4,
+                  8,
+                  16,
+                  32
+                ],
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ]
+              ],
+              "timeMs": 91.58250599999974,
+              "averageMoveMs": 0.8639859056603749
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 2476,
+              "steps": 212,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  4,
+                  2,
+                  16,
+                  2
+                ],
+                [
+                  16,
+                  4,
+                  8,
+                  4
+                ],
+                [
+                  4,
+                  8,
+                  16,
+                  32
+                ],
+                [
+                  2,
+                  32,
+                  256,
+                  64
+                ]
+              ],
+              "timeMs": 203.3848210000001,
+              "averageMoveMs": 0.9593623632075476
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1508,
+              "steps": 158,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  4,
+                  16,
+                  4,
+                  2
+                ],
+                [
+                  2,
+                  32,
+                  16,
+                  4
+                ],
+                [
+                  16,
+                  4,
+                  8,
+                  16
+                ],
+                [
+                  128,
+                  64,
+                  32,
+                  2
+                ]
+              ],
+              "timeMs": 140.58059900000035,
+              "averageMoveMs": 0.8897506265822807
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 920,
+              "steps": 95,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  4,
+                  2,
+                  4,
+                  2
+                ],
+                [
+                  2,
+                  4,
+                  8,
+                  4
+                ],
+                [
+                  4,
+                  8,
+                  2,
+                  8
+                ],
+                [
+                  2,
+                  4,
+                  128,
+                  32
+                ]
+              ],
+              "timeMs": 87.41203500000029,
+              "averageMoveMs": 0.9201266842105293
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1380,
+              "steps": 145,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ],
+                [
+                  8,
+                  16,
+                  8,
+                  4
+                ],
+                [
+                  64,
+                  32,
+                  2,
+                  16
+                ],
+                [
+                  128,
+                  8,
+                  16,
+                  4
+                ]
+              ],
+              "timeMs": 139.7785240000003,
+              "averageMoveMs": 0.9639898206896572
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 2444,
+              "steps": 207,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  256,
+                  2,
+                  32,
+                  16
+                ],
+                [
+                  8,
+                  64,
+                  4,
+                  8
+                ],
+                [
+                  16,
+                  32,
+                  8,
+                  4
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 189.6671379999998,
+              "averageMoveMs": 0.9162663671497575
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 732,
+              "steps": 97,
+              "maxTile": 64,
+              "win": false,
+              "board": [
+                [
+                  4,
+                  2,
+                  4,
+                  16
+                ],
+                [
+                  2,
+                  8,
+                  32,
+                  4
+                ],
+                [
+                  8,
+                  32,
+                  2,
+                  16
+                ],
+                [
+                  2,
+                  4,
+                  16,
+                  64
+                ]
+              ],
+              "timeMs": 86.23859300000004,
+              "averageMoveMs": 0.8890576597938148
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1304,
+              "steps": 133,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  64,
+                  2,
+                  128,
+                  32
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  16
+                ],
+                [
+                  4,
+                  16,
+                  8,
+                  2
+                ],
+                [
+                  2,
+                  4,
+                  2,
+                  4
+                ]
+              ],
+              "timeMs": 117.31256499999927,
+              "averageMoveMs": 0.8820493609022502
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 3472,
+              "steps": 294,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  16,
+                  8,
+                  4,
+                  2
+                ],
+                [
+                  64,
+                  16,
+                  8,
+                  4
+                ],
+                [
+                  128,
+                  64,
+                  16,
+                  8
+                ],
+                [
+                  256,
+                  2,
+                  32,
+                  16
+                ]
+              ],
+              "timeMs": 270.26432899999963,
+              "averageMoveMs": 0.9192664251700667
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 3144,
+              "steps": 263,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  16,
+                  4,
+                  128,
+                  16
+                ],
+                [
+                  2,
+                  16,
+                  256,
+                  64
+                ],
+                [
+                  4,
+                  32,
+                  8,
+                  4
+                ],
+                [
+                  2,
+                  4,
+                  2,
+                  16
+                ]
+              ],
+              "timeMs": 242.16953300000023,
+              "averageMoveMs": 0.9207967034220541
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 712,
+              "steps": 94,
+              "maxTile": 64,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  16,
+                  64,
+                  8
+                ],
+                [
+                  8,
+                  2,
+                  8,
+                  32
+                ],
+                [
+                  4,
+                  8,
+                  32,
+                  2
+                ],
+                [
+                  2,
+                  4,
+                  8,
+                  16
+                ]
+              ],
+              "timeMs": 79.27494100000058,
+              "averageMoveMs": 0.843350436170219
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1660,
+              "steps": 171,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  4,
+                  128,
+                  2,
+                  16
+                ],
+                [
+                  32,
+                  64,
+                  32,
+                  2
+                ],
+                [
+                  8,
+                  32,
+                  16,
+                  4
+                ],
+                [
+                  32,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 158.45133899999928,
+              "averageMoveMs": 0.9266160175438555
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 2456,
+              "steps": 208,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  32,
+                  256,
+                  2
+                ],
+                [
+                  16,
+                  4,
+                  32,
+                  4
+                ],
+                [
+                  4,
+                  16,
+                  64,
+                  8
+                ],
+                [
+                  2,
+                  4,
+                  16,
+                  2
+                ]
+              ],
+              "timeMs": 192.89739200000076,
+              "averageMoveMs": 0.9273913076923114
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1512,
+              "steps": 157,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ],
+                [
+                  16,
+                  32,
+                  16,
+                  4
+                ],
+                [
+                  8,
+                  16,
+                  64,
+                  32
+                ],
+                [
+                  16,
+                  8,
+                  128,
+                  4
+                ]
+              ],
+              "timeMs": 155.20118599999932,
+              "averageMoveMs": 0.9885425859872569
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1248,
+              "steps": 137,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  128,
+                  32,
+                  16,
+                  2
+                ],
+                [
+                  2,
+                  8,
+                  32,
+                  16
+                ],
+                [
+                  16,
+                  4,
+                  16,
+                  4
+                ],
+                [
+                  2,
+                  16,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 124.53989999999976,
+              "averageMoveMs": 0.9090503649635019
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1184,
+              "steps": 128,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  128,
+                  32,
+                  2,
+                  16
+                ],
+                [
+                  4,
+                  8,
+                  16,
+                  8
+                ],
+                [
+                  16,
+                  32,
+                  8,
+                  4
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 111.9268319999992,
+              "averageMoveMs": 0.8744283749999937
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 2540,
+              "steps": 213,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  4,
+                  2,
+                  64,
+                  256
+                ],
+                [
+                  2,
+                  4,
+                  8,
+                  64
+                ],
+                [
+                  8,
+                  16,
+                  2,
+                  16
+                ],
+                [
+                  2,
+                  4,
+                  16,
+                  2
+                ]
+              ],
+              "timeMs": 198.90663500000028,
+              "averageMoveMs": 0.9338339671361515
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 2848,
+              "steps": 244,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  4,
+                  2,
+                  16,
+                  4
+                ],
+                [
+                  2,
+                  8,
+                  32,
+                  64
+                ],
+                [
+                  4,
+                  32,
+                  64,
+                  256
+                ],
+                [
+                  2,
+                  8,
+                  16,
+                  32
+                ]
+              ],
+              "timeMs": 234.0044910000006,
+              "averageMoveMs": 0.9590347991803303
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1680,
+              "steps": 166,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  4,
+                  2,
+                  4,
+                  2
+                ],
+                [
+                  2,
+                  8,
+                  32,
+                  4
+                ],
+                [
+                  4,
+                  32,
+                  64,
+                  2
+                ],
+                [
+                  16,
+                  64,
+                  8,
+                  128
+                ]
+              ],
+              "timeMs": 161.19372199999998,
+              "averageMoveMs": 0.971046518072289
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1556,
+              "steps": 167,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  4,
+                  8,
+                  16
+                ],
+                [
+                  4,
+                  8,
+                  16,
+                  32
+                ],
+                [
+                  8,
+                  16,
+                  64,
+                  16
+                ],
+                [
+                  2,
+                  8,
+                  128,
+                  32
+                ]
+              ],
+              "timeMs": 151.00264799999968,
+              "averageMoveMs": 0.9042074730538903
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1384,
+              "steps": 144,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  128,
+                  64,
+                  8,
+                  2
+                ],
+                [
+                  4,
+                  8,
+                  32,
+                  8
+                ],
+                [
+                  32,
+                  4,
+                  8,
+                  4
+                ],
+                [
+                  4,
+                  2,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 160.9886430000006,
+              "averageMoveMs": 1.1179766875000041
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 2640,
+              "steps": 234,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ],
+                [
+                  32,
+                  16,
+                  8,
+                  4
+                ],
+                [
+                  256,
+                  32,
+                  16,
+                  8
+                ],
+                [
+                  32,
+                  64,
+                  8,
+                  16
+                ]
+              ],
+              "timeMs": 218.06508699999995,
+              "averageMoveMs": 0.931902081196581
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 568,
+              "steps": 83,
+              "maxTile": 64,
+              "win": false,
+              "board": [
+                [
+                  16,
+                  2,
+                  16,
+                  64
+                ],
+                [
+                  8,
+                  16,
+                  4,
+                  16
+                ],
+                [
+                  4,
+                  8,
+                  2,
+                  8
+                ],
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ]
+              ],
+              "timeMs": 73.59701700000005,
+              "averageMoveMs": 0.8867110481927717
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 3424,
+              "steps": 276,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ],
+                [
+                  4,
+                  8,
+                  16,
+                  8
+                ],
+                [
+                  8,
+                  16,
+                  2,
+                  128
+                ],
+                [
+                  2,
+                  8,
+                  128,
+                  256
+                ]
+              ],
+              "timeMs": 268.1120639999999,
+              "averageMoveMs": 0.9714205217391302
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1360,
+              "steps": 144,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  4,
+                  8,
+                  4,
+                  2
+                ],
+                [
+                  8,
+                  16,
+                  8,
+                  4
+                ],
+                [
+                  16,
+                  64,
+                  32,
+                  8
+                ],
+                [
+                  4,
+                  128,
+                  8,
+                  2
+                ]
+              ],
+              "timeMs": 142.05598399999963,
+              "averageMoveMs": 0.9864998888888863
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 5020,
+              "steps": 352,
+              "maxTile": 512,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ],
+                [
+                  16,
+                  64,
+                  16,
+                  4
+                ],
+                [
+                  4,
+                  512,
+                  64,
+                  32
+                ],
+                [
+                  16,
+                  2,
+                  32,
+                  4
+                ]
+              ],
+              "timeMs": 340.66039,
+              "averageMoveMs": 0.9677851988636363
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1308,
+              "steps": 143,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ],
+                [
+                  4,
+                  8,
+                  16,
+                  32
+                ],
+                [
+                  8,
+                  16,
+                  32,
+                  4
+                ],
+                [
+                  32,
+                  2,
+                  16,
+                  128
+                ]
+              ],
+              "timeMs": 133.68274199999996,
+              "averageMoveMs": 0.9348443496503493
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1344,
+              "steps": 141,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  128,
+                  64,
+                  4,
+                  2
+                ],
+                [
+                  32,
+                  8,
+                  16,
+                  8
+                ],
+                [
+                  16,
+                  4,
+                  8,
+                  4
+                ],
+                [
+                  8,
+                  2,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 132.4843039999996,
+              "averageMoveMs": 0.9396049929077986
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 632,
+              "steps": 90,
+              "maxTile": 64,
+              "win": false,
+              "board": [
+                [
+                  64,
+                  16,
+                  2,
+                  16
+                ],
+                [
+                  16,
+                  8,
+                  16,
+                  2
+                ],
+                [
+                  2,
+                  16,
+                  8,
+                  4
+                ],
+                [
+                  16,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 82.02678799999921,
+              "averageMoveMs": 0.9114087555555468
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 2276,
+              "steps": 214,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  4,
+                  16,
+                  2
+                ],
+                [
+                  4,
+                  16,
+                  64,
+                  4
+                ],
+                [
+                  8,
+                  32,
+                  4,
+                  32
+                ],
+                [
+                  2,
+                  128,
+                  32,
+                  128
+                ]
+              ],
+              "timeMs": 234.8079660000003,
+              "averageMoveMs": 1.0972334859813098
+            }
+          ]
+        },
+        {
+          "botName": "flatDepth3",
+          "games": 50,
+          "size": 4,
+          "averageScore": 1743.6,
+          "maxScore": 3708,
+          "averageSteps": 166.34,
+          "maxTile": 256,
+          "winCount": 0,
+          "winRate": 0,
+          "totalTimeMs": 7609.80776,
+          "averageTimeMs": 152.1961552,
+          "averageMoveMs": 0.9149702729349525,
+          "tileDistribution": {
+            "64": 7,
+            "128": 26,
+            "256": 17
+          },
+          "rawResults": [
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1360,
+              "steps": 147,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  128,
+                  4,
+                  2,
+                  16
+                ],
+                [
+                  16,
+                  64,
+                  16,
+                  8
+                ],
+                [
+                  8,
+                  16,
+                  8,
+                  4
+                ],
+                [
+                  16,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 140.21453200000178,
+              "averageMoveMs": 0.9538403537415088
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1196,
+              "steps": 129,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  16,
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  2,
+                  16,
+                  4
+                ],
+                [
+                  16,
+                  4,
+                  32,
+                  16
+                ],
+                [
+                  128,
+                  32,
+                  8,
+                  2
+                ]
+              ],
+              "timeMs": 116.10998100000143,
+              "averageMoveMs": 0.9000773720930343
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1244,
+              "steps": 132,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  32,
+                  2,
+                  128,
+                  16
+                ],
+                [
+                  4,
+                  8,
+                  32,
+                  8
+                ],
+                [
+                  8,
+                  32,
+                  16,
+                  4
+                ],
+                [
+                  4,
+                  2,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 118.68164600000091,
+              "averageMoveMs": 0.8991033787878857
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 2412,
+              "steps": 201,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  256,
+                  2,
+                  32,
+                  8
+                ],
+                [
+                  2,
+                  32,
+                  16,
+                  4
+                ],
+                [
+                  64,
+                  16,
+                  4,
+                  2
+                ],
+                [
+                  2,
+                  8,
+                  2,
+                  4
+                ]
+              ],
+              "timeMs": 184.82799400000295,
+              "averageMoveMs": 0.9195422587064823
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1244,
+              "steps": 138,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  16,
+                  32,
+                  4,
+                  128
+                ],
+                [
+                  8,
+                  16,
+                  32,
+                  16
+                ],
+                [
+                  4,
+                  8,
+                  16,
+                  8
+                ],
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ]
+              ],
+              "timeMs": 120.69141799999852,
+              "averageMoveMs": 0.8745754927536125
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 624,
+              "steps": 85,
+              "maxTile": 64,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  16,
+                  64,
+                  16
+                ],
+                [
+                  16,
+                  8,
+                  32,
+                  8
+                ],
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ],
+                [
+                  4,
+                  2,
+                  4,
+                  8
+                ]
+              ],
+              "timeMs": 77.31824500000221,
+              "averageMoveMs": 0.9096264117647318
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1208,
+              "steps": 131,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  128,
+                  32,
+                  4,
+                  2
+                ],
+                [
+                  8,
+                  16,
+                  32,
+                  16
+                ],
+                [
+                  2,
+                  4,
+                  16,
+                  4
+                ],
+                [
+                  16,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 118.36059800000294,
+              "averageMoveMs": 0.903516015267198
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 680,
+              "steps": 93,
+              "maxTile": 64,
+              "win": false,
+              "board": [
+                [
+                  64,
+                  32,
+                  2,
+                  16
+                ],
+                [
+                  16,
+                  8,
+                  16,
+                  8
+                ],
+                [
+                  8,
+                  16,
+                  8,
+                  4
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 79.11023800000112,
+              "averageMoveMs": 0.8506477204301196
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 2616,
+              "steps": 218,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  8,
+                  2,
+                  8,
+                  2
+                ],
+                [
+                  2,
+                  8,
+                  16,
+                  64
+                ],
+                [
+                  4,
+                  32,
+                  64,
+                  2
+                ],
+                [
+                  8,
+                  2,
+                  16,
+                  256
+                ]
+              ],
+              "timeMs": 195.08155199999965,
+              "averageMoveMs": 0.8948695045871543
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1424,
+              "steps": 149,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  4,
+                  2,
+                  8,
+                  4
+                ],
+                [
+                  2,
+                  4,
+                  16,
+                  8
+                ],
+                [
+                  4,
+                  8,
+                  32,
+                  128
+                ],
+                [
+                  8,
+                  32,
+                  64,
+                  2
+                ]
+              ],
+              "timeMs": 129.413198000002,
+              "averageMoveMs": 0.8685449530201478
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1728,
+              "steps": 173,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  128,
+                  64,
+                  4,
+                  2
+                ],
+                [
+                  64,
+                  4,
+                  32,
+                  16
+                ],
+                [
+                  8,
+                  16,
+                  2,
+                  8
+                ],
+                [
+                  2,
+                  32,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 166.59897199999978,
+              "averageMoveMs": 0.9629998381502877
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 2944,
+              "steps": 247,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  16,
+                  8,
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  256,
+                  8,
+                  4
+                ],
+                [
+                  128,
+                  32,
+                  16,
+                  8
+                ],
+                [
+                  32,
+                  16,
+                  8,
+                  4
+                ]
+              ],
+              "timeMs": 236.04004200000054,
+              "averageMoveMs": 0.9556277004048604
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 2476,
+              "steps": 211,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  32,
+                  256,
+                  8,
+                  4
+                ],
+                [
+                  16,
+                  64,
+                  16,
+                  8
+                ],
+                [
+                  2,
+                  32,
+                  8,
+                  4
+                ],
+                [
+                  4,
+                  16,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 195.5659250000026,
+              "averageMoveMs": 0.9268527251184958
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 2480,
+              "steps": 215,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  8,
+                  256,
+                  32
+                ],
+                [
+                  8,
+                  16,
+                  2,
+                  8
+                ],
+                [
+                  4,
+                  8,
+                  32,
+                  64
+                ],
+                [
+                  2,
+                  4,
+                  8,
+                  16
+                ]
+              ],
+              "timeMs": 190.78631200000018,
+              "averageMoveMs": 0.887378195348838
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1148,
+              "steps": 123,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  4,
+                  8,
+                  32,
+                  8
+                ],
+                [
+                  8,
+                  16,
+                  128,
+                  16
+                ],
+                [
+                  4,
+                  8,
+                  32,
+                  4
+                ],
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ]
+              ],
+              "timeMs": 103.19112300000052,
+              "averageMoveMs": 0.8389522195121993
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1592,
+              "steps": 163,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  16,
+                  8,
+                  2,
+                  4
+                ],
+                [
+                  128,
+                  16,
+                  64,
+                  16
+                ],
+                [
+                  4,
+                  64,
+                  16,
+                  4
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 141.59212000000116,
+              "averageMoveMs": 0.8686633128834427
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1392,
+              "steps": 145,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  4,
+                  128,
+                  32,
+                  16
+                ],
+                [
+                  16,
+                  64,
+                  2,
+                  8
+                ],
+                [
+                  4,
+                  8,
+                  16,
+                  4
+                ],
+                [
+                  2,
+                  16,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 126.70772000000215,
+              "averageMoveMs": 0.873846344827601
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1664,
+              "steps": 171,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  8,
+                  128,
+                  64,
+                  2
+                ],
+                [
+                  16,
+                  64,
+                  16,
+                  8
+                ],
+                [
+                  8,
+                  32,
+                  8,
+                  4
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 158.45121800000197,
+              "averageMoveMs": 0.926615309941532
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 652,
+              "steps": 88,
+              "maxTile": 64,
+              "win": false,
+              "board": [
+                [
+                  64,
+                  2,
+                  4,
+                  16
+                ],
+                [
+                  16,
+                  32,
+                  16,
+                  8
+                ],
+                [
+                  8,
+                  16,
+                  2,
+                  4
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 79.12854900000093,
+              "averageMoveMs": 0.8991880568181924
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 2964,
+              "steps": 249,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  256,
+                  16,
+                  4,
+                  16
+                ],
+                [
+                  2,
+                  128,
+                  32,
+                  8
+                ],
+                [
+                  32,
+                  16,
+                  8,
+                  4
+                ],
+                [
+                  2,
+                  4,
+                  16,
+                  2
+                ]
+              ],
+              "timeMs": 233.86790299999848,
+              "averageMoveMs": 0.9392285261044115
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 3360,
+              "steps": 275,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ],
+                [
+                  4,
+                  8,
+                  16,
+                  8
+                ],
+                [
+                  8,
+                  32,
+                  64,
+                  16
+                ],
+                [
+                  2,
+                  64,
+                  128,
+                  256
+                ]
+              ],
+              "timeMs": 263.3228530000015,
+              "averageMoveMs": 0.9575376472727327
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1808,
+              "steps": 181,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ],
+                [
+                  64,
+                  16,
+                  8,
+                  4
+                ],
+                [
+                  128,
+                  4,
+                  64,
+                  8
+                ],
+                [
+                  4,
+                  64,
+                  8,
+                  2
+                ]
+              ],
+              "timeMs": 154.92886699999872,
+              "averageMoveMs": 0.855960591160214
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1412,
+              "steps": 147,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  32,
+                  128,
+                  4
+                ],
+                [
+                  4,
+                  8,
+                  64,
+                  32
+                ],
+                [
+                  8,
+                  4,
+                  16,
+                  2
+                ],
+                [
+                  4,
+                  2,
+                  4,
+                  8
+                ]
+              ],
+              "timeMs": 132.30212599999868,
+              "averageMoveMs": 0.900014462585025
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 2472,
+              "steps": 214,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  16,
+                  4,
+                  64,
+                  256
+                ],
+                [
+                  8,
+                  2,
+                  8,
+                  32
+                ],
+                [
+                  4,
+                  16,
+                  32,
+                  8
+                ],
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ]
+              ],
+              "timeMs": 203.3993199999968,
+              "averageMoveMs": 0.9504641121495178
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1004,
+              "steps": 129,
+              "maxTile": 64,
+              "win": false,
+              "board": [
+                [
+                  64,
+                  32,
+                  8,
+                  4
+                ],
+                [
+                  32,
+                  8,
+                  32,
+                  16
+                ],
+                [
+                  8,
+                  32,
+                  16,
+                  4
+                ],
+                [
+                  16,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 112.73794800000178,
+              "averageMoveMs": 0.8739375813953626
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1064,
+              "steps": 121,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  128,
+                  16,
+                  8,
+                  2
+                ],
+                [
+                  16,
+                  8,
+                  16,
+                  8
+                ],
+                [
+                  2,
+                  16,
+                  8,
+                  4
+                ],
+                [
+                  16,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 109.79038599999694,
+              "averageMoveMs": 0.9073585619834458
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1352,
+              "steps": 142,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  8,
+                  64,
+                  128
+                ],
+                [
+                  8,
+                  16,
+                  8,
+                  32
+                ],
+                [
+                  4,
+                  8,
+                  16,
+                  2
+                ],
+                [
+                  2,
+                  4,
+                  8,
+                  4
+                ]
+              ],
+              "timeMs": 138.6361539999998,
+              "averageMoveMs": 0.9763109436619705
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1128,
+              "steps": 120,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  32,
+                  8,
+                  16
+                ],
+                [
+                  2,
+                  8,
+                  32,
+                  4
+                ],
+                [
+                  4,
+                  2,
+                  128,
+                  16
+                ]
+              ],
+              "timeMs": 107.53217099999893,
+              "averageMoveMs": 0.896101424999991
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1272,
+              "steps": 138,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ],
+                [
+                  4,
+                  8,
+                  2,
+                  16
+                ],
+                [
+                  8,
+                  32,
+                  128,
+                  32
+                ],
+                [
+                  16,
+                  4,
+                  32,
+                  8
+                ]
+              ],
+              "timeMs": 119.4105810000001,
+              "averageMoveMs": 0.8652940652173919
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 912,
+              "steps": 110,
+              "maxTile": 64,
+              "win": false,
+              "board": [
+                [
+                  16,
+                  4,
+                  2,
+                  4
+                ],
+                [
+                  64,
+                  16,
+                  4,
+                  2
+                ],
+                [
+                  32,
+                  4,
+                  16,
+                  8
+                ],
+                [
+                  8,
+                  64,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 103.28802299999734,
+              "averageMoveMs": 0.9389820272727031
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 584,
+              "steps": 82,
+              "maxTile": 64,
+              "win": false,
+              "board": [
+                [
+                  16,
+                  2,
+                  16,
+                  64
+                ],
+                [
+                  8,
+                  16,
+                  4,
+                  16
+                ],
+                [
+                  4,
+                  8,
+                  16,
+                  8
+                ],
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ]
+              ],
+              "timeMs": 71.98087799999848,
+              "averageMoveMs": 0.8778155853658351
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1172,
+              "steps": 125,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  8,
+                  2,
+                  8,
+                  2
+                ],
+                [
+                  16,
+                  8,
+                  16,
+                  4
+                ],
+                [
+                  32,
+                  16,
+                  32,
+                  2
+                ],
+                [
+                  128,
+                  2,
+                  4,
+                  8
+                ]
+              ],
+              "timeMs": 110.50753299999997,
+              "averageMoveMs": 0.8840602639999997
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 728,
+              "steps": 95,
+              "maxTile": 64,
+              "win": false,
+              "board": [
+                [
+                  8,
+                  16,
+                  32,
+                  64
+                ],
+                [
+                  2,
+                  4,
+                  16,
+                  32
+                ],
+                [
+                  4,
+                  8,
+                  2,
+                  16
+                ],
+                [
+                  2,
+                  4,
+                  8,
+                  4
+                ]
+              ],
+              "timeMs": 85.31170899999779,
+              "averageMoveMs": 0.898017989473661
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 2352,
+              "steps": 207,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  32,
+                  256,
+                  8,
+                  16
+                ],
+                [
+                  16,
+                  8,
+                  32,
+                  8
+                ],
+                [
+                  4,
+                  32,
+                  16,
+                  4
+                ],
+                [
+                  2,
+                  16,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 186.71613399999842,
+              "averageMoveMs": 0.9020103091787364
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 2460,
+              "steps": 209,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  16,
+                  256,
+                  64,
+                  16
+                ],
+                [
+                  8,
+                  32,
+                  16,
+                  2
+                ],
+                [
+                  2,
+                  4,
+                  32,
+                  4
+                ],
+                [
+                  4,
+                  2,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 194.07842999999775,
+              "averageMoveMs": 0.9286049282296543
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 3152,
+              "steps": 266,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  16,
+                  8,
+                  256
+                ],
+                [
+                  8,
+                  32,
+                  64,
+                  8
+                ],
+                [
+                  4,
+                  8,
+                  16,
+                  128
+                ],
+                [
+                  2,
+                  4,
+                  8,
+                  16
+                ]
+              ],
+              "timeMs": 236.01536200000191,
+              "averageMoveMs": 0.8872757969924884
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1452,
+              "steps": 153,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  16,
+                  8,
+                  16,
+                  128
+                ],
+                [
+                  8,
+                  16,
+                  64,
+                  4
+                ],
+                [
+                  4,
+                  8,
+                  16,
+                  32
+                ],
+                [
+                  2,
+                  4,
+                  8,
+                  16
+                ]
+              ],
+              "timeMs": 135.3058400000009,
+              "averageMoveMs": 0.8843518954248425
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1128,
+              "steps": 121,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  4,
+                  2,
+                  4
+                ],
+                [
+                  8,
+                  32,
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  16,
+                  8,
+                  4
+                ],
+                [
+                  128,
+                  32,
+                  16,
+                  2
+                ]
+              ],
+              "timeMs": 107.31355299999996,
+              "averageMoveMs": 0.8868888677685947
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 2304,
+              "steps": 201,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  256,
+                  32,
+                  2,
+                  16
+                ],
+                [
+                  2,
+                  16,
+                  32,
+                  2
+                ],
+                [
+                  4,
+                  32,
+                  8,
+                  4
+                ],
+                [
+                  16,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 182.45393299999705,
+              "averageMoveMs": 0.907731009950234
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1524,
+              "steps": 158,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  4,
+                  2,
+                  32,
+                  128
+                ],
+                [
+                  8,
+                  32,
+                  64,
+                  2
+                ],
+                [
+                  4,
+                  8,
+                  16,
+                  32
+                ],
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ]
+              ],
+              "timeMs": 148.87682099999802,
+              "averageMoveMs": 0.9422583607594811
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1232,
+              "steps": 120,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  128,
+                  64,
+                  4,
+                  2
+                ],
+                [
+                  32,
+                  4,
+                  8,
+                  4
+                ],
+                [
+                  16,
+                  8,
+                  4,
+                  2
+                ],
+                [
+                  2,
+                  4,
+                  2,
+                  4
+                ]
+              ],
+              "timeMs": 105.64484699999593,
+              "averageMoveMs": 0.8803737249999661
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 3132,
+              "steps": 258,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  4,
+                  2,
+                  4
+                ],
+                [
+                  64,
+                  32,
+                  4,
+                  2
+                ],
+                [
+                  256,
+                  4,
+                  32,
+                  8
+                ],
+                [
+                  2,
+                  128,
+                  16,
+                  2
+                ]
+              ],
+              "timeMs": 237.79956000000675,
+              "averageMoveMs": 0.9217037209302588
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1604,
+              "steps": 164,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  32,
+                  4,
+                  2
+                ],
+                [
+                  32,
+                  16,
+                  2,
+                  4
+                ],
+                [
+                  128,
+                  32,
+                  16,
+                  8
+                ],
+                [
+                  64,
+                  16,
+                  8,
+                  16
+                ]
+              ],
+              "timeMs": 155.64128400000482,
+              "averageMoveMs": 0.9490322195122245
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1352,
+              "steps": 149,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  128,
+                  32,
+                  2,
+                  16
+                ],
+                [
+                  8,
+                  16,
+                  32,
+                  8
+                ],
+                [
+                  2,
+                  32,
+                  16,
+                  4
+                ],
+                [
+                  16,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 136.36705799999618,
+              "averageMoveMs": 0.9152151543623904
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 3208,
+              "steps": 281,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  16,
+                  4,
+                  2
+                ],
+                [
+                  64,
+                  32,
+                  16,
+                  4
+                ],
+                [
+                  256,
+                  64,
+                  32,
+                  8
+                ],
+                [
+                  32,
+                  16,
+                  64,
+                  2
+                ]
+              ],
+              "timeMs": 248.43950300000142,
+              "averageMoveMs": 0.8841263451957346
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 2604,
+              "steps": 219,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  256,
+                  64,
+                  8,
+                  2
+                ],
+                [
+                  64,
+                  4,
+                  32,
+                  8
+                ],
+                [
+                  8,
+                  16,
+                  8,
+                  4
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 212.68220900000597,
+              "averageMoveMs": 0.9711516392694336
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1108,
+              "steps": 118,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  16,
+                  4,
+                  16,
+                  128
+                ],
+                [
+                  8,
+                  16,
+                  2,
+                  4
+                ],
+                [
+                  16,
+                  32,
+                  16,
+                  2
+                ],
+                [
+                  2,
+                  4,
+                  2,
+                  8
+                ]
+              ],
+              "timeMs": 107.86885900000198,
+              "averageMoveMs": 0.9141428728813726
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 3708,
+              "steps": 276,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  4,
+                  8,
+                  16
+                ],
+                [
+                  4,
+                  8,
+                  16,
+                  4
+                ],
+                [
+                  8,
+                  16,
+                  256,
+                  2
+                ],
+                [
+                  16,
+                  4,
+                  2,
+                  256
+                ]
+              ],
+              "timeMs": 259.3475859999962,
+              "averageMoveMs": 0.939665166666653
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 2480,
+              "steps": 215,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  4,
+                  8,
+                  32,
+                  256
+                ],
+                [
+                  8,
+                  16,
+                  8,
+                  64
+                ],
+                [
+                  4,
+                  8,
+                  2,
+                  32
+                ],
+                [
+                  2,
+                  4,
+                  8,
+                  16
+                ]
+              ],
+              "timeMs": 218.27445499999885,
+              "averageMoveMs": 1.0152300232558087
+            },
+            {
+              "botName": "flatDepth3",
+              "size": 4,
+              "score": 1064,
+              "steps": 115,
+              "maxTile": 128,
+              "win": false,
+              "board": [
+                [
+                  128,
+                  16,
+                  4,
+                  2
+                ],
+                [
+                  32,
+                  8,
+                  16,
+                  8
+                ],
+                [
+                  16,
+                  4,
+                  8,
+                  4
+                ],
+                [
+                  8,
+                  2,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 106.69812800000363,
+              "averageMoveMs": 0.9278098086956837
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "botName": "championDepth3",
+      "seeds": 2,
+      "games": 100,
+      "size": 4,
+      "averageScore": 25324.8,
+      "maxScore": 65520,
+      "averageSteps": 1332.1100000000001,
+      "maxTile": 4096,
+      "winCount": 58,
+      "winRate": 57.99999999999999,
+      "totalTimeMs": 37987.369893,
+      "averageTimeMs": 379.87369893000005,
+      "averageMoveMs": 0.28516691484186746,
+      "tileDistribution": {
+        "256": 1,
+        "512": 7,
+        "1024": 34,
+        "2048": 53,
+        "4096": 5
+      },
+      "seedResults": [
+        {
+          "botName": "championDepth3",
+          "games": 50,
+          "size": 4,
+          "averageScore": 24689.68,
+          "maxScore": 59640,
+          "averageSteps": 1298.08,
+          "maxTile": 4096,
+          "winCount": 28,
+          "winRate": 56.00000000000001,
+          "totalTimeMs": 18845.019848999997,
+          "averageTimeMs": 376.9003969799999,
+          "averageMoveMs": 0.29035221017194623,
+          "tileDistribution": {
+            "256": 1,
+            "512": 5,
+            "1024": 16,
+            "2048": 25,
+            "4096": 3
+          },
+          "rawResults": [
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 32028,
+              "steps": 1630,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ],
+                [
+                  8,
+                  16,
+                  32,
+                  16
+                ],
+                [
+                  16,
+                  128,
+                  256,
+                  32
+                ],
+                [
+                  2,
+                  1024,
+                  4,
+                  2048
+                ]
+              ],
+              "timeMs": 561.8570279999985,
+              "averageMoveMs": 0.34469756319018313
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 9444,
+              "steps": 531,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  4,
+                  8,
+                  4,
+                  2
+                ],
+                [
+                  32,
+                  16,
+                  2,
+                  16
+                ],
+                [
+                  2,
+                  4,
+                  32,
+                  8
+                ],
+                [
+                  1024,
+                  16,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 166.63431499999933,
+              "averageMoveMs": 0.3138122693032003
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 16132,
+              "steps": 953,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  128,
+                  512,
+                  1024
+                ],
+                [
+                  8,
+                  16,
+                  64,
+                  256
+                ],
+                [
+                  2,
+                  4,
+                  16,
+                  32
+                ],
+                [
+                  4,
+                  2,
+                  4,
+                  16
+                ]
+              ],
+              "timeMs": 295.68029800000113,
+              "averageMoveMs": 0.3102626421825825
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 20556,
+              "steps": 1134,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  1024,
+                  8,
+                  256,
+                  2
+                ],
+                [
+                  32,
+                  1024,
+                  64,
+                  4
+                ],
+                [
+                  16,
+                  32,
+                  16,
+                  32
+                ],
+                [
+                  4,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 337.9133230000007,
+              "averageMoveMs": 0.29798352998236394
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 31896,
+              "steps": 1628,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2048,
+                  32,
+                  8,
+                  2
+                ],
+                [
+                  64,
+                  1024,
+                  256,
+                  16
+                ],
+                [
+                  16,
+                  64,
+                  32,
+                  8
+                ],
+                [
+                  2,
+                  4,
+                  16,
+                  2
+                ]
+              ],
+              "timeMs": 487.2498680000008,
+              "averageMoveMs": 0.2992935307125312
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 4660,
+              "steps": 320,
+              "maxTile": 512,
+              "win": false,
+              "board": [
+                [
+                  4,
+                  2,
+                  4,
+                  2
+                ],
+                [
+                  512,
+                  4,
+                  32,
+                  16
+                ],
+                [
+                  64,
+                  32,
+                  8,
+                  4
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 85.38222899999892,
+              "averageMoveMs": 0.2668194656249966
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 36176,
+              "steps": 1866,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2,
+                  4,
+                  8,
+                  4
+                ],
+                [
+                  16,
+                  128,
+                  32,
+                  8
+                ],
+                [
+                  512,
+                  256,
+                  64,
+                  16
+                ],
+                [
+                  2048,
+                  1024,
+                  16,
+                  2
+                ]
+              ],
+              "timeMs": 533.5560270000005,
+              "averageMoveMs": 0.28593570578778166
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 31988,
+              "steps": 1631,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2048,
+                  2,
+                  32,
+                  4
+                ],
+                [
+                  1024,
+                  256,
+                  16,
+                  2
+                ],
+                [
+                  4,
+                  128,
+                  2,
+                  8
+                ],
+                [
+                  2,
+                  32,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 461.53003399999943,
+              "averageMoveMs": 0.2829736566523602
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 35196,
+              "steps": 1814,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2048,
+                  1024,
+                  128,
+                  2
+                ],
+                [
+                  512,
+                  128,
+                  32,
+                  8
+                ],
+                [
+                  16,
+                  64,
+                  16,
+                  4
+                ],
+                [
+                  2,
+                  16,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 506.98755900000106,
+              "averageMoveMs": 0.2794859751929444
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 35452,
+              "steps": 1816,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2,
+                  16,
+                  1024,
+                  2048
+                ],
+                [
+                  4,
+                  64,
+                  256,
+                  512
+                ],
+                [
+                  2,
+                  16,
+                  32,
+                  16
+                ],
+                [
+                  4,
+                  2,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 519.1121110000004,
+              "averageMoveMs": 0.28585468667400904
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 10332,
+              "steps": 611,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ],
+                [
+                  64,
+                  32,
+                  16,
+                  4
+                ],
+                [
+                  32,
+                  2,
+                  64,
+                  8
+                ],
+                [
+                  1024,
+                  64,
+                  16,
+                  2
+                ]
+              ],
+              "timeMs": 165.99623000000065,
+              "averageMoveMs": 0.2716795908346983
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 7200,
+              "steps": 489,
+              "maxTile": 512,
+              "win": false,
+              "board": [
+                [
+                  4,
+                  64,
+                  256,
+                  512
+                ],
+                [
+                  2,
+                  8,
+                  128,
+                  8
+                ],
+                [
+                  4,
+                  16,
+                  64,
+                  4
+                ],
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ]
+              ],
+              "timeMs": 133.49806100000023,
+              "averageMoveMs": 0.2730021697341518
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 35372,
+              "steps": 1815,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2048,
+                  1024,
+                  8,
+                  2
+                ],
+                [
+                  512,
+                  256,
+                  64,
+                  8
+                ],
+                [
+                  16,
+                  4,
+                  16,
+                  4
+                ],
+                [
+                  8,
+                  2,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 516.8570870000003,
+              "averageMoveMs": 0.2847697449035814
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 4328,
+              "steps": 333,
+              "maxTile": 256,
+              "win": false,
+              "board": [
+                [
+                  256,
+                  64,
+                  16,
+                  4
+                ],
+                [
+                  8,
+                  16,
+                  256,
+                  8
+                ],
+                [
+                  2,
+                  64,
+                  16,
+                  4
+                ],
+                [
+                  4,
+                  16,
+                  8,
+                  2
+                ]
+              ],
+              "timeMs": 89.15318300000035,
+              "averageMoveMs": 0.26772727627627735
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 12448,
+              "steps": 754,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  1024,
+                  32,
+                  8,
+                  2
+                ],
+                [
+                  64,
+                  256,
+                  128,
+                  16
+                ],
+                [
+                  8,
+                  16,
+                  64,
+                  8
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 210.58947100000114,
+              "averageMoveMs": 0.2792963806366063
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 30536,
+              "steps": 1537,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2048,
+                  16,
+                  8,
+                  4
+                ],
+                [
+                  32,
+                  1024,
+                  128,
+                  2
+                ],
+                [
+                  8,
+                  64,
+                  32,
+                  8
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 436.2808069999992,
+              "averageMoveMs": 0.28385218412491814
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 30736,
+              "steps": 1563,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2048,
+                  1024,
+                  64,
+                  2
+                ],
+                [
+                  32,
+                  128,
+                  32,
+                  16
+                ],
+                [
+                  16,
+                  32,
+                  16,
+                  2
+                ],
+                [
+                  2,
+                  8,
+                  2,
+                  4
+                ]
+              ],
+              "timeMs": 448.75309500000003,
+              "averageMoveMs": 0.28711010556621885
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 36064,
+              "steps": 1875,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  4,
+                  16,
+                  4,
+                  2
+                ],
+                [
+                  2,
+                  8,
+                  128,
+                  32
+                ],
+                [
+                  16,
+                  32,
+                  256,
+                  512
+                ],
+                [
+                  2,
+                  8,
+                  1024,
+                  2048
+                ]
+              ],
+              "timeMs": 533.1362530000006,
+              "averageMoveMs": 0.28433933493333363
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 26236,
+              "steps": 1354,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2048,
+                  128,
+                  4,
+                  2
+                ],
+                [
+                  32,
+                  512,
+                  64,
+                  16
+                ],
+                [
+                  16,
+                  128,
+                  32,
+                  8
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 382.52733499999886,
+              "averageMoveMs": 0.2825164955686845
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 37312,
+              "steps": 1950,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  8,
+                  256,
+                  1024,
+                  2048
+                ],
+                [
+                  2,
+                  32,
+                  512,
+                  256
+                ],
+                [
+                  8,
+                  16,
+                  32,
+                  64
+                ],
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ]
+              ],
+              "timeMs": 657.9912219999987,
+              "averageMoveMs": 0.33743139589743526
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 36276,
+              "steps": 1886,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2048,
+                  1024,
+                  32,
+                  2
+                ],
+                [
+                  512,
+                  256,
+                  128,
+                  4
+                ],
+                [
+                  64,
+                  32,
+                  16,
+                  2
+                ],
+                [
+                  2,
+                  4,
+                  2,
+                  4
+                ]
+              ],
+              "timeMs": 649.7689999999984,
+              "averageMoveMs": 0.34452226935312746
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 31708,
+              "steps": 1608,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2048,
+                  2,
+                  64,
+                  2
+                ],
+                [
+                  256,
+                  1024,
+                  32,
+                  8
+                ],
+                [
+                  4,
+                  64,
+                  8,
+                  4
+                ],
+                [
+                  2,
+                  16,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 481.2835679999989,
+              "averageMoveMs": 0.29930570149253666
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 12428,
+              "steps": 738,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ],
+                [
+                  32,
+                  64,
+                  16,
+                  8
+                ],
+                [
+                  64,
+                  2,
+                  256,
+                  32
+                ],
+                [
+                  1024,
+                  128,
+                  8,
+                  4
+                ]
+              ],
+              "timeMs": 214.34619499999826,
+              "averageMoveMs": 0.2904419986449841
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 11468,
+              "steps": 749,
+              "maxTile": 512,
+              "win": false,
+              "board": [
+                [
+                  512,
+                  64,
+                  32,
+                  4
+                ],
+                [
+                  128,
+                  512,
+                  256,
+                  16
+                ],
+                [
+                  16,
+                  64,
+                  32,
+                  8
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 213.63655899999867,
+              "averageMoveMs": 0.28522905073431065
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 16180,
+              "steps": 957,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  1024,
+                  2,
+                  256,
+                  4
+                ],
+                [
+                  32,
+                  512,
+                  64,
+                  2
+                ],
+                [
+                  16,
+                  128,
+                  32,
+                  8
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 266.57503200000065,
+              "averageMoveMs": 0.27855280250783765
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 30464,
+              "steps": 1530,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2048,
+                  1024,
+                  64,
+                  2
+                ],
+                [
+                  32,
+                  128,
+                  16,
+                  4
+                ],
+                [
+                  4,
+                  16,
+                  4,
+                  2
+                ],
+                [
+                  2,
+                  4,
+                  16,
+                  4
+                ]
+              ],
+              "timeMs": 431.95372599999973,
+              "averageMoveMs": 0.282322696732026
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 21796,
+              "steps": 1098,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  4,
+                  64,
+                  128,
+                  2048
+                ],
+                [
+                  2,
+                  32,
+                  2,
+                  64
+                ],
+                [
+                  8,
+                  16,
+                  32,
+                  8
+                ],
+                [
+                  4,
+                  2,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 311.81950700000016,
+              "averageMoveMs": 0.283988622040073
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 59044,
+              "steps": 2723,
+              "maxTile": 4096,
+              "win": true,
+              "board": [
+                [
+                  32,
+                  64,
+                  1024,
+                  4096
+                ],
+                [
+                  8,
+                  128,
+                  64,
+                  512
+                ],
+                [
+                  4,
+                  16,
+                  32,
+                  16
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 766.9696709999989,
+              "averageMoveMs": 0.2816634854939401
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 22264,
+              "steps": 1114,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  4,
+                  8,
+                  4,
+                  2
+                ],
+                [
+                  8,
+                  16,
+                  32,
+                  8
+                ],
+                [
+                  32,
+                  2,
+                  256,
+                  2
+                ],
+                [
+                  2048,
+                  8,
+                  2,
+                  16
+                ]
+              ],
+              "timeMs": 312.3240689999984,
+              "averageMoveMs": 0.28036271903051924
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 16336,
+              "steps": 964,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  1024,
+                  512,
+                  4,
+                  2
+                ],
+                [
+                  128,
+                  256,
+                  64,
+                  32
+                ],
+                [
+                  16,
+                  64,
+                  4,
+                  2
+                ],
+                [
+                  2,
+                  8,
+                  2,
+                  8
+                ]
+              ],
+              "timeMs": 272.72919600000023,
+              "averageMoveMs": 0.2829141037344401
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 15080,
+              "steps": 881,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  4,
+                  128,
+                  1024
+                ],
+                [
+                  16,
+                  32,
+                  64,
+                  512
+                ],
+                [
+                  8,
+                  16,
+                  128,
+                  16
+                ],
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ]
+              ],
+              "timeMs": 245.15596599999844,
+              "averageMoveMs": 0.2782701089670811
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 59640,
+              "steps": 2746,
+              "maxTile": 4096,
+              "win": true,
+              "board": [
+                [
+                  2,
+                  4,
+                  1024,
+                  4096
+                ],
+                [
+                  8,
+                  16,
+                  256,
+                  512
+                ],
+                [
+                  4,
+                  32,
+                  16,
+                  64
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 786.2972650000011,
+              "averageMoveMs": 0.2863427767662058
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 12368,
+              "steps": 739,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  8,
+                  2,
+                  4
+                ],
+                [
+                  4,
+                  32,
+                  64,
+                  8
+                ],
+                [
+                  8,
+                  64,
+                  256,
+                  128
+                ],
+                [
+                  4,
+                  8,
+                  16,
+                  1024
+                ]
+              ],
+              "timeMs": 203.00187700000242,
+              "averageMoveMs": 0.2746980744249018
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 16816,
+              "steps": 993,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  1024,
+                  4,
+                  128,
+                  2
+                ],
+                [
+                  512,
+                  256,
+                  64,
+                  32
+                ],
+                [
+                  128,
+                  32,
+                  8,
+                  4
+                ],
+                [
+                  4,
+                  2,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 289.70233599999847,
+              "averageMoveMs": 0.2917445478348424
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 15864,
+              "steps": 948,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  64,
+                  128,
+                  1024
+                ],
+                [
+                  16,
+                  128,
+                  512,
+                  128
+                ],
+                [
+                  8,
+                  16,
+                  32,
+                  16
+                ],
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ]
+              ],
+              "timeMs": 271.78621900000144,
+              "averageMoveMs": 0.286694323839664
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 27256,
+              "steps": 1429,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ],
+                [
+                  16,
+                  32,
+                  64,
+                  16
+                ],
+                [
+                  2,
+                  128,
+                  4,
+                  256
+                ],
+                [
+                  8,
+                  16,
+                  512,
+                  2048
+                ]
+              ],
+              "timeMs": 398.3662030000014,
+              "averageMoveMs": 0.2787727102869149
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 27724,
+              "steps": 1459,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2048,
+                  4,
+                  128,
+                  4
+                ],
+                [
+                  512,
+                  256,
+                  32,
+                  2
+                ],
+                [
+                  128,
+                  32,
+                  16,
+                  8
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 414.8063140000013,
+              "averageMoveMs": 0.2843086456477048
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 27316,
+              "steps": 1427,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ],
+                [
+                  8,
+                  16,
+                  32,
+                  16
+                ],
+                [
+                  16,
+                  64,
+                  512,
+                  256
+                ],
+                [
+                  32,
+                  128,
+                  2,
+                  2048
+                ]
+              ],
+              "timeMs": 397.50596099999893,
+              "averageMoveMs": 0.2785605893482824
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 7360,
+              "steps": 504,
+              "maxTile": 512,
+              "win": false,
+              "board": [
+                [
+                  512,
+                  256,
+                  16,
+                  2
+                ],
+                [
+                  64,
+                  128,
+                  64,
+                  8
+                ],
+                [
+                  4,
+                  32,
+                  16,
+                  4
+                ],
+                [
+                  2,
+                  16,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 145.48483300000225,
+              "averageMoveMs": 0.2886603829365124
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 56748,
+              "steps": 2601,
+              "maxTile": 4096,
+              "win": true,
+              "board": [
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ],
+                [
+                  8,
+                  32,
+                  64,
+                  32
+                ],
+                [
+                  2,
+                  128,
+                  256,
+                  64
+                ],
+                [
+                  8,
+                  16,
+                  1024,
+                  4096
+                ]
+              ],
+              "timeMs": 747.4024340000033,
+              "averageMoveMs": 0.2873519546328348
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 16172,
+              "steps": 966,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  1024,
+                  512,
+                  8,
+                  4
+                ],
+                [
+                  256,
+                  128,
+                  32,
+                  16
+                ],
+                [
+                  64,
+                  16,
+                  8,
+                  4
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 271.40958500000124,
+              "averageMoveMs": 0.28096230331263067
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 36256,
+              "steps": 1887,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2048,
+                  1024,
+                  128,
+                  2
+                ],
+                [
+                  512,
+                  256,
+                  32,
+                  16
+                ],
+                [
+                  16,
+                  64,
+                  16,
+                  2
+                ],
+                [
+                  8,
+                  4,
+                  2,
+                  4
+                ]
+              ],
+              "timeMs": 547.5017799999987,
+              "averageMoveMs": 0.29014402755696805
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 10788,
+              "steps": 681,
+              "maxTile": 512,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  4,
+                  2,
+                  4
+                ],
+                [
+                  256,
+                  8,
+                  32,
+                  8
+                ],
+                [
+                  32,
+                  512,
+                  16,
+                  2
+                ],
+                [
+                  512,
+                  128,
+                  4,
+                  8
+                ]
+              ],
+              "timeMs": 185.81392499999856,
+              "averageMoveMs": 0.2728545154185001
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 21440,
+              "steps": 1064,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  16,
+                  8,
+                  4
+                ],
+                [
+                  16,
+                  64,
+                  32,
+                  8
+                ],
+                [
+                  2048,
+                  128,
+                  2,
+                  16
+                ]
+              ],
+              "timeMs": 302.1339220000009,
+              "averageMoveMs": 0.28396045300751965
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 27252,
+              "steps": 1421,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ],
+                [
+                  32,
+                  128,
+                  16,
+                  8
+                ],
+                [
+                  64,
+                  256,
+                  4,
+                  2
+                ],
+                [
+                  2048,
+                  512,
+                  32,
+                  4
+                ]
+              ],
+              "timeMs": 399.35322499999893,
+              "averageMoveMs": 0.281036752287121
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 35372,
+              "steps": 1799,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2,
+                  4,
+                  2,
+                  8
+                ],
+                [
+                  4,
+                  16,
+                  4,
+                  64
+                ],
+                [
+                  8,
+                  32,
+                  256,
+                  512
+                ],
+                [
+                  2,
+                  16,
+                  1024,
+                  2048
+                ]
+              ],
+              "timeMs": 518.762111,
+              "averageMoveMs": 0.28836137354085606
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 35604,
+              "steps": 1831,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2048,
+                  1024,
+                  8,
+                  2
+                ],
+                [
+                  512,
+                  256,
+                  64,
+                  4
+                ],
+                [
+                  16,
+                  64,
+                  4,
+                  2
+                ],
+                [
+                  2,
+                  4,
+                  2,
+                  4
+                ]
+              ],
+              "timeMs": 527.8470349999989,
+              "averageMoveMs": 0.28828347078099337
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 11384,
+              "steps": 681,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  1024,
+                  128,
+                  64,
+                  2
+                ],
+                [
+                  128,
+                  64,
+                  32,
+                  16
+                ],
+                [
+                  16,
+                  8,
+                  2,
+                  8
+                ],
+                [
+                  4,
+                  2,
+                  8,
+                  2
+                ]
+              ],
+              "timeMs": 194.08743099999992,
+              "averageMoveMs": 0.285003569750367
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 16404,
+              "steps": 976,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  1024,
+                  512,
+                  64,
+                  16
+                ],
+                [
+                  256,
+                  128,
+                  32,
+                  8
+                ],
+                [
+                  4,
+                  64,
+                  16,
+                  4
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 284.2705139999998,
+              "averageMoveMs": 0.2912607725409834
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 15584,
+              "steps": 900,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  8,
+                  512,
+                  1024
+                ],
+                [
+                  16,
+                  32,
+                  256,
+                  64
+                ],
+                [
+                  2,
+                  16,
+                  64,
+                  8
+                ],
+                [
+                  4,
+                  2,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 256.84024099999806,
+              "averageMoveMs": 0.2853780455555534
+            }
+          ]
+        },
+        {
+          "botName": "championDepth3",
+          "games": 50,
+          "size": 4,
+          "averageScore": 25959.92,
+          "maxScore": 65520,
+          "averageSteps": 1366.14,
+          "maxTile": 4096,
+          "winCount": 30,
+          "winRate": 60,
+          "totalTimeMs": 19142.350044000006,
+          "averageTimeMs": 382.8470008800001,
+          "averageMoveMs": 0.28023994676973085,
+          "tileDistribution": {
+            "512": 2,
+            "1024": 18,
+            "2048": 28,
+            "4096": 2
+          },
+          "rawResults": [
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 33032,
+              "steps": 1708,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2,
+                  128,
+                  1024,
+                  2048
+                ],
+                [
+                  32,
+                  64,
+                  256,
+                  128
+                ],
+                [
+                  8,
+                  16,
+                  32,
+                  16
+                ],
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ]
+              ],
+              "timeMs": 486.97276600000623,
+              "averageMoveMs": 0.2851128606557414
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 16160,
+              "steps": 952,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  1024,
+                  512,
+                  2,
+                  32
+                ],
+                [
+                  256,
+                  128,
+                  64,
+                  2
+                ],
+                [
+                  4,
+                  32,
+                  16,
+                  8
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 262.0911039999992,
+              "averageMoveMs": 0.27530578151260415
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 49676,
+              "steps": 2219,
+              "maxTile": 4096,
+              "win": true,
+              "board": [
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  32,
+                  16,
+                  4
+                ],
+                [
+                  32,
+                  128,
+                  64,
+                  16
+                ],
+                [
+                  4096,
+                  512,
+                  16,
+                  2
+                ]
+              ],
+              "timeMs": 607.1415439999982,
+              "averageMoveMs": 0.27361042992338813
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 34932,
+              "steps": 1796,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2048,
+                  1024,
+                  64,
+                  2
+                ],
+                [
+                  64,
+                  128,
+                  512,
+                  8
+                ],
+                [
+                  16,
+                  64,
+                  16,
+                  4
+                ],
+                [
+                  2,
+                  16,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 501.8279679999978,
+              "averageMoveMs": 0.27941423608017696
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 15340,
+              "steps": 893,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  4,
+                  16,
+                  512,
+                  1024
+                ],
+                [
+                  2,
+                  4,
+                  256,
+                  32
+                ],
+                [
+                  4,
+                  2,
+                  64,
+                  8
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 251.88608999999997,
+              "averageMoveMs": 0.2820672900335946
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 27472,
+              "steps": 1432,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2048,
+                  2,
+                  256,
+                  8
+                ],
+                [
+                  128,
+                  512,
+                  64,
+                  4
+                ],
+                [
+                  32,
+                  64,
+                  32,
+                  2
+                ],
+                [
+                  2,
+                  4,
+                  2,
+                  8
+                ]
+              ],
+              "timeMs": 404.9890829999931,
+              "averageMoveMs": 0.2828136054469226
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 16268,
+              "steps": 971,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  16,
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  32,
+                  128,
+                  16
+                ],
+                [
+                  16,
+                  64,
+                  4,
+                  256
+                ],
+                [
+                  2,
+                  32,
+                  512,
+                  1024
+                ]
+              ],
+              "timeMs": 273.7131150000059,
+              "averageMoveMs": 0.2818878630278125
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 22192,
+              "steps": 1128,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ],
+                [
+                  8,
+                  16,
+                  2,
+                  8
+                ],
+                [
+                  128,
+                  64,
+                  16,
+                  2
+                ],
+                [
+                  2048,
+                  128,
+                  32,
+                  4
+                ]
+              ],
+              "timeMs": 315.6749809999965,
+              "averageMoveMs": 0.2798537065602806
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 15532,
+              "steps": 891,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  8,
+                  32,
+                  512,
+                  1024
+                ],
+                [
+                  4,
+                  16,
+                  256,
+                  64
+                ],
+                [
+                  2,
+                  8,
+                  64,
+                  8
+                ],
+                [
+                  4,
+                  2,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 249.38734800000384,
+              "averageMoveMs": 0.2798960134680178
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 35144,
+              "steps": 1809,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2,
+                  4,
+                  8,
+                  4
+                ],
+                [
+                  8,
+                  16,
+                  32,
+                  64
+                ],
+                [
+                  2,
+                  8,
+                  128,
+                  512
+                ],
+                [
+                  4,
+                  128,
+                  1024,
+                  2048
+                ]
+              ],
+              "timeMs": 512.772066000005,
+              "averageMoveMs": 0.28345608955224155
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 21188,
+              "steps": 1184,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  1024,
+                  256,
+                  64,
+                  16
+                ],
+                [
+                  32,
+                  1024,
+                  8,
+                  2
+                ],
+                [
+                  128,
+                  32,
+                  2,
+                  8
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 329.1239579999965,
+              "averageMoveMs": 0.2779763158783754
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 16232,
+              "steps": 967,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  4,
+                  2,
+                  4,
+                  2
+                ],
+                [
+                  2,
+                  16,
+                  32,
+                  64
+                ],
+                [
+                  4,
+                  32,
+                  128,
+                  512
+                ],
+                [
+                  2,
+                  16,
+                  256,
+                  1024
+                ]
+              ],
+              "timeMs": 273.4551700000011,
+              "averageMoveMs": 0.28278714581179015
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 25512,
+              "steps": 1302,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2048,
+                  512,
+                  2,
+                  16
+                ],
+                [
+                  4,
+                  64,
+                  128,
+                  8
+                ],
+                [
+                  32,
+                  16,
+                  32,
+                  4
+                ],
+                [
+                  4,
+                  2,
+                  8,
+                  2
+                ]
+              ],
+              "timeMs": 362.8703200000018,
+              "averageMoveMs": 0.27870224270353444
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 35892,
+              "steps": 1867,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2,
+                  64,
+                  8,
+                  2048
+                ],
+                [
+                  16,
+                  256,
+                  1024,
+                  512
+                ],
+                [
+                  8,
+                  32,
+                  64,
+                  32
+                ],
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ]
+              ],
+              "timeMs": 524.502075000004,
+              "averageMoveMs": 0.280933087841459
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 34864,
+              "steps": 1772,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  4,
+                  2,
+                  8,
+                  2
+                ],
+                [
+                  2,
+                  32,
+                  16,
+                  4
+                ],
+                [
+                  128,
+                  1024,
+                  32,
+                  8
+                ],
+                [
+                  2048,
+                  512,
+                  128,
+                  2
+                ]
+              ],
+              "timeMs": 486.2219810000024,
+              "averageMoveMs": 0.2743916371331842
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 23796,
+              "steps": 1239,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  16,
+                  32,
+                  64,
+                  2048
+                ],
+                [
+                  8,
+                  128,
+                  256,
+                  64
+                ],
+                [
+                  4,
+                  64,
+                  16,
+                  8
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 348.39837599999737,
+              "averageMoveMs": 0.2811932009685209
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 14780,
+              "steps": 874,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  1024,
+                  2,
+                  128,
+                  4
+                ],
+                [
+                  64,
+                  512,
+                  64,
+                  32
+                ],
+                [
+                  16,
+                  32,
+                  16,
+                  8
+                ],
+                [
+                  4,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 249.53035300000192,
+              "averageMoveMs": 0.28550383638444154
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 35368,
+              "steps": 1818,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ],
+                [
+                  32,
+                  8,
+                  2,
+                  4
+                ],
+                [
+                  512,
+                  32,
+                  16,
+                  2
+                ],
+                [
+                  2048,
+                  1024,
+                  256,
+                  32
+                ]
+              ],
+              "timeMs": 510.42260100000567,
+              "averageMoveMs": 0.2807605066006632
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 38176,
+              "steps": 1972,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2,
+                  512,
+                  8,
+                  2048
+                ],
+                [
+                  16,
+                  128,
+                  1024,
+                  512
+                ],
+                [
+                  32,
+                  8,
+                  16,
+                  2
+                ],
+                [
+                  2,
+                  4,
+                  2,
+                  4
+                ]
+              ],
+              "timeMs": 559.0258019999965,
+              "averageMoveMs": 0.2834816440162254
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 27252,
+              "steps": 1421,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2048,
+                  512,
+                  8,
+                  2
+                ],
+                [
+                  256,
+                  128,
+                  32,
+                  8
+                ],
+                [
+                  64,
+                  32,
+                  16,
+                  4
+                ],
+                [
+                  4,
+                  2,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 388.0636019999947,
+              "averageMoveMs": 0.2730919085151265
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 21396,
+              "steps": 1052,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2,
+                  32,
+                  4,
+                  2048
+                ],
+                [
+                  4,
+                  8,
+                  64,
+                  128
+                ],
+                [
+                  2,
+                  4,
+                  8,
+                  32
+                ],
+                [
+                  4,
+                  2,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 297.2358219999951,
+              "averageMoveMs": 0.28254355703421585
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 16372,
+              "steps": 972,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  1024,
+                  512,
+                  8,
+                  2
+                ],
+                [
+                  256,
+                  128,
+                  16,
+                  64
+                ],
+                [
+                  4,
+                  64,
+                  32,
+                  8
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 273.34223499999644,
+              "averageMoveMs": 0.2812162911522597
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 35772,
+              "steps": 1846,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  16,
+                  64,
+                  1024,
+                  2048
+                ],
+                [
+                  4,
+                  32,
+                  256,
+                  512
+                ],
+                [
+                  2,
+                  8,
+                  64,
+                  16
+                ],
+                [
+                  16,
+                  2,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 523.3236089999991,
+              "averageMoveMs": 0.2834905790899237
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 28264,
+              "steps": 1509,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2048,
+                  512,
+                  128,
+                  16
+                ],
+                [
+                  64,
+                  256,
+                  64,
+                  4
+                ],
+                [
+                  32,
+                  128,
+                  8,
+                  2
+                ],
+                [
+                  4,
+                  2,
+                  16,
+                  4
+                ]
+              ],
+              "timeMs": 427.28494599999976,
+              "averageMoveMs": 0.2831576845593106
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 21136,
+              "steps": 1182,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ],
+                [
+                  8,
+                  32,
+                  16,
+                  8
+                ],
+                [
+                  256,
+                  1024,
+                  64,
+                  16
+                ],
+                [
+                  1024,
+                  8,
+                  128,
+                  4
+                ]
+              ],
+              "timeMs": 335.2350829999996,
+              "averageMoveMs": 0.28361682148900136
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 16208,
+              "steps": 964,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ],
+                [
+                  32,
+                  64,
+                  16,
+                  4
+                ],
+                [
+                  512,
+                  256,
+                  32,
+                  8
+                ],
+                [
+                  1024,
+                  4,
+                  128,
+                  2
+                ]
+              ],
+              "timeMs": 269.74445299999934,
+              "averageMoveMs": 0.2798178973029039
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 16480,
+              "steps": 978,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  1024,
+                  512,
+                  128,
+                  16
+                ],
+                [
+                  256,
+                  64,
+                  32,
+                  8
+                ],
+                [
+                  64,
+                  32,
+                  16,
+                  4
+                ],
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ]
+              ],
+              "timeMs": 275.2065380000058,
+              "averageMoveMs": 0.28139727811861537
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 65520,
+              "steps": 2901,
+              "maxTile": 4096,
+              "win": true,
+              "board": [
+                [
+                  4096,
+                  16,
+                  4,
+                  2
+                ],
+                [
+                  2048,
+                  128,
+                  32,
+                  16
+                ],
+                [
+                  32,
+                  16,
+                  8,
+                  2
+                ],
+                [
+                  2,
+                  4,
+                  2,
+                  4
+                ]
+              ],
+              "timeMs": 811.9488340000025,
+              "averageMoveMs": 0.2798858441916589
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 36364,
+              "steps": 1897,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2048,
+                  1024,
+                  32,
+                  16
+                ],
+                [
+                  512,
+                  256,
+                  128,
+                  8
+                ],
+                [
+                  16,
+                  64,
+                  32,
+                  4
+                ],
+                [
+                  2,
+                  16,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 525.4053270000004,
+              "averageMoveMs": 0.27696643489720635
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 14424,
+              "steps": 838,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  1024,
+                  2,
+                  128,
+                  8
+                ],
+                [
+                  32,
+                  512,
+                  64,
+                  4
+                ],
+                [
+                  8,
+                  32,
+                  16,
+                  2
+                ],
+                [
+                  2,
+                  4,
+                  2,
+                  8
+                ]
+              ],
+              "timeMs": 236.67787599999428,
+              "averageMoveMs": 0.282431832935554
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 35616,
+              "steps": 1839,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2048,
+                  1024,
+                  2,
+                  32
+                ],
+                [
+                  512,
+                  256,
+                  16,
+                  8
+                ],
+                [
+                  16,
+                  32,
+                  64,
+                  4
+                ],
+                [
+                  2,
+                  4,
+                  16,
+                  2
+                ]
+              ],
+              "timeMs": 515.0778849999988,
+              "averageMoveMs": 0.2800858537248498
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 24784,
+              "steps": 1252,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2,
+                  8,
+                  512,
+                  2048
+                ],
+                [
+                  8,
+                  32,
+                  4,
+                  8
+                ],
+                [
+                  4,
+                  16,
+                  32,
+                  64
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 351.0424219999986,
+              "averageMoveMs": 0.2803853210862609
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 15848,
+              "steps": 932,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  1024,
+                  64,
+                  32,
+                  4
+                ],
+                [
+                  256,
+                  8,
+                  512,
+                  32
+                ],
+                [
+                  16,
+                  64,
+                  32,
+                  8
+                ],
+                [
+                  2,
+                  16,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 255.2297099999996,
+              "averageMoveMs": 0.2738516201716734
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 31620,
+              "steps": 1597,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  16,
+                  64,
+                  256,
+                  2048
+                ],
+                [
+                  8,
+                  16,
+                  64,
+                  1024
+                ],
+                [
+                  2,
+                  4,
+                  8,
+                  4
+                ],
+                [
+                  4,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 451.18469700000423,
+              "averageMoveMs": 0.28252016092674026
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 36260,
+              "steps": 1887,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2048,
+                  1024,
+                  256,
+                  2
+                ],
+                [
+                  64,
+                  512,
+                  128,
+                  16
+                ],
+                [
+                  16,
+                  32,
+                  16,
+                  8
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 534.4853549999971,
+              "averageMoveMs": 0.2832460810810795
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 6840,
+              "steps": 477,
+              "maxTile": 512,
+              "win": false,
+              "board": [
+                [
+                  512,
+                  32,
+                  8,
+                  4
+                ],
+                [
+                  64,
+                  256,
+                  64,
+                  32
+                ],
+                [
+                  16,
+                  32,
+                  8,
+                  4
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 130.64828700000362,
+              "averageMoveMs": 0.2738957798742214
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 35864,
+              "steps": 1856,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  64,
+                  4,
+                  1024,
+                  2048
+                ],
+                [
+                  32,
+                  64,
+                  256,
+                  512
+                ],
+                [
+                  8,
+                  16,
+                  32,
+                  16
+                ],
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ]
+              ],
+              "timeMs": 528.2132420000053,
+              "averageMoveMs": 0.284597651939658
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 14108,
+              "steps": 808,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ],
+                [
+                  8,
+                  32,
+                  16,
+                  32
+                ],
+                [
+                  4,
+                  512,
+                  128,
+                  2
+                ],
+                [
+                  2,
+                  1024,
+                  8,
+                  4
+                ]
+              ],
+              "timeMs": 220.78727100000106,
+              "averageMoveMs": 0.2732515730198033
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 31880,
+              "steps": 1641,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  8,
+                  2,
+                  4,
+                  2
+                ],
+                [
+                  4,
+                  16,
+                  64,
+                  16
+                ],
+                [
+                  8,
+                  32,
+                  256,
+                  1024
+                ],
+                [
+                  16,
+                  64,
+                  4,
+                  2048
+                ]
+              ],
+              "timeMs": 462.1247299999959,
+              "averageMoveMs": 0.28161165752589634
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 15828,
+              "steps": 918,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  4,
+                  2,
+                  4
+                ],
+                [
+                  32,
+                  8,
+                  4,
+                  8
+                ],
+                [
+                  512,
+                  128,
+                  32,
+                  16
+                ],
+                [
+                  1024,
+                  256,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 255.69182400000136,
+              "averageMoveMs": 0.27853139869281196
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 12288,
+              "steps": 732,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  4,
+                  2,
+                  8,
+                  2
+                ],
+                [
+                  32,
+                  16,
+                  2,
+                  4
+                ],
+                [
+                  64,
+                  256,
+                  32,
+                  16
+                ],
+                [
+                  1024,
+                  2,
+                  128,
+                  32
+                ]
+              ],
+              "timeMs": 203.81185600000026,
+              "averageMoveMs": 0.2784314972677599
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 14104,
+              "steps": 830,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  2,
+                  64,
+                  2,
+                  1024
+                ],
+                [
+                  16,
+                  32,
+                  512,
+                  32
+                ],
+                [
+                  4,
+                  16,
+                  64,
+                  16
+                ],
+                [
+                  2,
+                  4,
+                  8,
+                  2
+                ]
+              ],
+              "timeMs": 229.18366799999785,
+              "averageMoveMs": 0.2761249012048167
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 17440,
+              "steps": 1042,
+              "maxTile": 1024,
+              "win": false,
+              "board": [
+                [
+                  1024,
+                  8,
+                  256,
+                  2
+                ],
+                [
+                  256,
+                  512,
+                  64,
+                  16
+                ],
+                [
+                  64,
+                  32,
+                  16,
+                  8
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 285.2023479999989,
+              "averageMoveMs": 0.27370666794625614
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 34684,
+              "steps": 1777,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2048,
+                  1024,
+                  4,
+                  2
+                ],
+                [
+                  2,
+                  512,
+                  128,
+                  64
+                ],
+                [
+                  16,
+                  64,
+                  32,
+                  4
+                ],
+                [
+                  4,
+                  2,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 497.0739890000041,
+              "averageMoveMs": 0.279726499155883
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 27816,
+              "steps": 1458,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  4,
+                  2,
+                  4,
+                  2
+                ],
+                [
+                  16,
+                  64,
+                  16,
+                  8
+                ],
+                [
+                  128,
+                  256,
+                  128,
+                  2
+                ],
+                [
+                  2048,
+                  512,
+                  16,
+                  4
+                ]
+              ],
+              "timeMs": 408.768379000001,
+              "averageMoveMs": 0.28036239986282646
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 35712,
+              "steps": 1836,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2,
+                  4,
+                  16,
+                  2
+                ],
+                [
+                  8,
+                  32,
+                  64,
+                  16
+                ],
+                [
+                  4,
+                  64,
+                  1024,
+                  256
+                ],
+                [
+                  2,
+                  512,
+                  2,
+                  2048
+                ]
+              ],
+              "timeMs": 509.03426000000036,
+              "averageMoveMs": 0.2772517755991287
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 36164,
+              "steps": 1873,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2048,
+                  512,
+                  128,
+                  2
+                ],
+                [
+                  1024,
+                  256,
+                  64,
+                  4
+                ],
+                [
+                  4,
+                  32,
+                  16,
+                  8
+                ],
+                [
+                  2,
+                  8,
+                  4,
+                  2
+                ]
+              ],
+              "timeMs": 532.379995999996,
+              "averageMoveMs": 0.28423918633208545
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 30492,
+              "steps": 1530,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2,
+                  4,
+                  8,
+                  64
+                ],
+                [
+                  8,
+                  32,
+                  128,
+                  2
+                ],
+                [
+                  4,
+                  8,
+                  1024,
+                  8
+                ],
+                [
+                  8,
+                  32,
+                  2,
+                  2048
+                ]
+              ],
+              "timeMs": 428.0646110000016,
+              "averageMoveMs": 0.279780791503269
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 22532,
+              "steps": 1158,
+              "maxTile": 2048,
+              "win": true,
+              "board": [
+                [
+                  2,
+                  4,
+                  2,
+                  4
+                ],
+                [
+                  8,
+                  2,
+                  8,
+                  32
+                ],
+                [
+                  2,
+                  32,
+                  64,
+                  128
+                ],
+                [
+                  4,
+                  64,
+                  128,
+                  2048
+                ]
+              ],
+              "timeMs": 324.4157190000042,
+              "averageMoveMs": 0.2801517435233197
+            },
+            {
+              "botName": "championDepth3",
+              "size": 4,
+              "score": 7372,
+              "steps": 510,
+              "maxTile": 512,
+              "win": false,
+              "board": [
+                [
+                  8,
+                  64,
+                  8,
+                  512
+                ],
+                [
+                  2,
+                  16,
+                  256,
+                  128
+                ],
+                [
+                  8,
+                  64,
+                  32,
+                  4
+                ],
+                [
+                  2,
+                  4,
+                  16,
+                  2
+                ]
+              ],
+              "timeMs": 141.01288000000204,
+              "averageMoveMs": 0.2764958431372589
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

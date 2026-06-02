@@ -1,0 +1,3 @@
+bot,seeds,games,size,averageScore,maxScore,averageSteps,maxTile,winCount,winRate,totalTimeMs,averageTimeMs,averageMoveMs
+flatDepth3,2,100,4x4,1144,3384,127,256,0,0,11859,119,0.934
+championDepth3,2,100,4x4,25325,65520,1332,4096,58,58,38839,388,0.292

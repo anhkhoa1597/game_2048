@@ -118,10 +118,10 @@ function evaluateWeights(weights, options = {}) {
 
   const fitness =
     averageScore +
-    rate2048 * 25000 +
-    rate4096 * 50000 +
+    rate2048 * 30000 +
+    rate4096 * 60000 +
     Math.log2(maxTile) * 1000 +
-    averageSteps * 0.8;
+    averageSteps * 0.6;
 
   return {
     weights: cloneWeights(weights),
