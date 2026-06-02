@@ -16,6 +16,12 @@ import {
   getWeightedBeamDepthMove,
 } from "./weightedDepthBot.js";
 import { getWeightedExpectimaxMove } from "./weightedExpectimaxBot.js";
+import { getValueMlpMove, getValueMlpBeamMove } from "./ml/valueMlpBot.js";
+import {
+  getRankerMlpMove,
+  getRankerMlpBeamMove,
+  getRankerMlpSafeMove,
+} from "./ml/rankerMlpBot.js";
 
 export const BOT_NAMES = {
   DEPTH_2: "depth2",
@@ -35,9 +41,17 @@ export const BOT_NAMES = {
   WEIGHTED_EXPECTIMAX: "weightedExpectimax",
   CHAMPION_BEAM_3: "championBeam3",
   TRAINED_BEAM_3_WEIGHTS_V5: "trainedBeam3V5",
+  VALUE_MLP_V1: "valueMlpV1",
+  VALUE_MLP_BEAM_2: "valueMlpBeam2",
+  RANKER_MLP_V1: "rankerMlpV1",
+  RANKER_MLP_BEAM_2: "rankerMlpBeam2",
+  RANKER_MLP_SAFE: "rankerMlpSafe",
+  RANKER_MLP_BEST: "rankerMlpBest",
+  RANKER_MLP_SAFE_STRICT: "rankerMlpSafeStrict",
+  RANKER_MLP_SAFE_LOOSE: "rankerMlpSafeLoose",
+  RANKER_MLP_DEPTH_3_SAFE: "rankerMlpDepth3Safe",
+  RANKER_MLP_FAST_SAFE: "rankerMlpFastSafe",
   // TRAINED_BEAM_WEIGHTS_V1: "trainedBeamV1",
-  // POLICY_MLP_V1: "policyMlpV1",
-  // VALUE_MLP_V1: "valueMlpV1",
 };
 
 export function getBotMove(botName, board) {
@@ -67,16 +81,61 @@ export function getBotMove(botName, board) {
     case BOT_NAMES.AUTO_STRONG:
     case BOT_NAMES.CHAMPION_DEPTH_3:
       return getWeightedDepthMove(board, CHAMPION_WEIGHTS, 3);
-    case BOT_NAMES.CHAMPION:
     case BOT_NAMES.CHAMPION_BEAM_3:
       return getWeightedBeamDepthMove(board, CHAMPION_WEIGHTS, 3, 2);
+    case BOT_NAMES.CHAMPION:
+      return getRankerMlpSafeMove(board, {
+        minProbability: 0.88,
+        minMargin: 1.25,
+        fallback: "beam3",
+      });
     case BOT_NAMES.TRAINED_BEAM_3_WEIGHTS_V5:
       return getWeightedBeamDepthMove(board, TRAINED_WEIGHTS_V5, 3, 2);
+    case BOT_NAMES.VALUE_MLP_V1:
+      return getValueMlpMove(board);
+    case BOT_NAMES.VALUE_MLP_BEAM_2:
+      return getValueMlpBeamMove(board, 2, 2);
+    case BOT_NAMES.RANKER_MLP_V1:
+      return getRankerMlpMove(board);
+    case BOT_NAMES.RANKER_MLP_BEAM_2:
+      return getRankerMlpBeamMove(board, 2, 2);
+    case BOT_NAMES.RANKER_MLP_SAFE:
+      return getRankerMlpSafeMove(board, {
+        minProbability: 0.82,
+        minMargin: 1.1,
+        fallback: "beam3",
+      });
+    case BOT_NAMES.RANKER_MLP_BEST:
+      return getRankerMlpSafeMove(board, {
+        minProbability: 0.88,
+        minMargin: 1.25,
+        fallback: "beam3",
+      });
+    case BOT_NAMES.RANKER_MLP_SAFE_STRICT:
+      return getRankerMlpSafeMove(board, {
+        minProbability: 0.9,
+        minMargin: 1.5,
+        fallback: "beam3",
+      });
+    case BOT_NAMES.RANKER_MLP_SAFE_LOOSE:
+      return getRankerMlpSafeMove(board, {
+        minProbability: 0.74,
+        minMargin: 0.75,
+        fallback: "beam3",
+      });
+    case BOT_NAMES.RANKER_MLP_DEPTH_3_SAFE:
+      return getRankerMlpSafeMove(board, {
+        minProbability: 0.86,
+        minMargin: 1.2,
+        fallback: "depth3",
+      });
+    case BOT_NAMES.RANKER_MLP_FAST_SAFE:
+      return getRankerMlpSafeMove(board, {
+        minProbability: 0.86,
+        minMargin: 1.25,
+        fallback: "depth2",
+      });
 
-    // case BOT_NAMES.POLICY_MLP_V1:
-    //   return getPolicyMlpMove(board);
-    // case BOT_NAMES.VALUE_MLP_V1:
-    //   return getValueMlpMove(board);
     default:
       throw new Error(`Unknown bot name: ${botName}`);
   }
