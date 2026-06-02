@@ -16,8 +16,8 @@ import {
   getWeightedBeamDepthMove,
 } from "./weightedDepthBot.js";
 import { getWeightedExpectimaxMove } from "./weightedExpectimaxBot.js";
-import { getPolicyMlpMove } from "./mlPolicyBot.js";
-import { getValueMlpMove } from "./valueMlpBot.js";
+// import { getPolicyMlpMove } from "./mlPolicyBot.js";
+// import { getValueMlpMove } from "./valueMlpBot.js";
 
 export const BOT_NAMES = {
   DEPTH_2: "depth2",
@@ -38,8 +38,8 @@ export const BOT_NAMES = {
   CHAMPION_BEAM_3: "championBeam3",
   TRAINED_BEAM_3_WEIGHTS_V5: "trainedBeam3V5",
   // TRAINED_BEAM_WEIGHTS_V1: "trainedBeamV1",
-  POLICY_MLP_V1: "policyMlpV1",
-  VALUE_MLP_V1: "valueMlpV1",
+  // POLICY_MLP_V1: "policyMlpV1",
+  // VALUE_MLP_V1: "valueMlpV1",
 };
 
 export function getBotMove(botName, board) {
@@ -77,10 +77,10 @@ export function getBotMove(botName, board) {
     case BOT_NAMES.TRAINED_BEAM_3_WEIGHTS_V5:
       return getWeightedBeamDepthMove(board, TRAINED_WEIGHTS_V5, 3, 2);
 
-    case BOT_NAMES.POLICY_MLP_V1:
-      return getPolicyMlpMove(board);
-    case BOT_NAMES.VALUE_MLP_V1:
-      return getValueMlpMove(board);
+    // case BOT_NAMES.POLICY_MLP_V1:
+    //   return getPolicyMlpMove(board);
+    // case BOT_NAMES.VALUE_MLP_V1:
+    //   return getValueMlpMove(board);
     default:
       throw new Error(`Unknown bot name: ${botName}`);
   }
