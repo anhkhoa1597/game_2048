@@ -2,12 +2,12 @@ import { getDepthMove } from "./depthBot.js";
 import { getHeuristicMove } from "./heuristicBot.js";
 import { getExpectimaxMove } from "./expectimaxBot.js";
 import {
-  TRAINED_WEIGHTS_V3,
-  TRAINED_WEIGHTS_V2,
   TRAINED_WEIGHTS_V1,
-  CHAMPION_WEIGHTS,
+  TRAINED_WEIGHTS_V2,
+  TRAINED_WEIGHTS_V3,
   TRAINED_WEIGHTS_V4,
   TRAINED_WEIGHTS_V5,
+  CHAMPION_WEIGHTS,
 } from "./trainedWeights.js";
 
 import { DEFAULT_WEIGHTS } from "./weightedEvaluator.js";
@@ -16,8 +16,6 @@ import {
   getWeightedBeamDepthMove,
 } from "./weightedDepthBot.js";
 import { getWeightedExpectimaxMove } from "./weightedExpectimaxBot.js";
-// import { getPolicyMlpMove } from "./mlPolicyBot.js";
-// import { getValueMlpMove } from "./valueMlpBot.js";
 
 export const BOT_NAMES = {
   DEPTH_2: "depth2",
@@ -47,10 +45,8 @@ export function getBotMove(botName, board) {
     case BOT_NAMES.DEPTH_2:
     case BOT_NAMES.FAST:
       return getDepthMove(board, 2);
-
     case BOT_NAMES.DEPTH_3:
       return getDepthMove(board, 3);
-
     case BOT_NAMES.HEURISTIC:
       return getHeuristicMove(board);
     case BOT_NAMES.EXPECTIMAX:

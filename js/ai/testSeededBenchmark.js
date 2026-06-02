@@ -6,8 +6,6 @@ import {
 } from "./seededBenchmark.js";
 import { saveBenchmarkReport } from "./benchmarkReporter.js";
 const BOTS_TO_TEST = [
-  BOT_NAMES.POLICY_MLP_V1,
-  BOT_NAMES.VALUE_MLP_V1,
   BOT_NAMES.CHAMPION_BEAM_3,
 ];
 
