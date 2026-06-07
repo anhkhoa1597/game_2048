@@ -1,4 +1,0 @@
-bot,seeds,games,size,averageScore,maxScore,averageSteps,maxTile,winCount,winRate,totalTimeMs,averageTimeMs,averageMoveMs
-policyMlpV1,2,100,4x4,2625,6416,227,512,0,0,1211,12,0.053
-championBeam3,2,100,4x4,25167,60536,1327,4096,59,59,43629,436,0.329
-championDepth3,2,100,4x4,25325,65520,1332,4096,58,58,40092,401,0.301

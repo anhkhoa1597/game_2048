@@ -7,9 +7,7 @@ import {
 import { BOT_NAMES } from "./botRegistry.js";
 
 const BOTS_TO_TEST = [
-  BOT_NAMES.TRAINED_V1,
-  BOT_NAMES.TRAINED_V2,
-  BOT_NAMES.TRAINED_V3,
+  BOT_NAMES.NTUPLE_TD_BEAM_2,
 ];
 
 const results = benchmarkBots(BOTS_TO_TEST, {

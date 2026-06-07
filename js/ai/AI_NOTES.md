@@ -130,12 +130,19 @@ Instead of using fixed handcrafted weights inside `evaluateBoard()`, it uses:
 evaluateBoardWithWeights(board, scoreGained, weights)
 ```
 
-Current trained variants:
+Retired trained variants:
 
 ```txt
 trainedV1 = weightedDepthBot + TRAINED_WEIGHTS_V1
 trainedV2 = weightedDepthBot + TRAINED_WEIGHTS_V2
 champion = weightedDepthBot + CHAMPION_WEIGHTS
+```
+
+Current production bot:
+
+```txt
+ntupleTdBeam2 = n-tuple value + beam depth 2 + futureWeight 0.49
+weights = js/ai/ntuple/ntupleWeights.js
 ```
 
 ---

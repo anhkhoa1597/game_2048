@@ -1,4 +1,0 @@
-bot,seeds,games,size,averageScore,maxScore,averageSteps,maxTile,winCount,winRate,totalTimeMs,averageTimeMs,averageMoveMs
-championDepth2,3,3000,4x4,21164,70920,1146,4096,1361,45.37,360641,120,0.105
-championDepth3,3,3000,4x4,22492,78180,1197,4096,1495,49.83,1058105,353,0.295
-trainedBeamV1,3,3000,4x4,23991,120108,1266,8192,1609,53.63,1173804,391,0.309

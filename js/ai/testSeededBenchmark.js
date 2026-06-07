@@ -6,7 +6,7 @@ import {
 } from "./seededBenchmark.js";
 import { saveBenchmarkReport } from "./benchmarkReporter.js";
 const BOTS_TO_TEST = [
-  BOT_NAMES.CHAMPION_BEAM_3,
+  BOT_NAMES.NTUPLE_TD_BEAM_2,
 ];
 
 const summaries = runMultiSeedBenchmark(BOTS_TO_TEST, {
