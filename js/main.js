@@ -26,11 +26,22 @@ function getAutoPlayDelay(botName) {
     return 60;
   }
 
-  if (botName === BOT_NAMES.AUTO_STRONG || botName === BOT_NAMES.CHAMPION) {
+  if (
+    botName === BOT_NAMES.AUTO_STRONG ||
+    botName === BOT_NAMES.CHAMPION ||
+    botName === BOT_NAMES.LEGACY_CHAMPION ||
+    botName === BOT_NAMES.NTUPLE_TD_BEAM_2
+  ) {
     return 180;
   }
 
   return 60;
+}
+
+function getSecretBotName() {
+  return getBoardValues().length === 4
+    ? BOT_NAMES.NTUPLE_TD_BEAM_2
+    : BOT_NAMES.LEGACY_CHAMPION;
 }
 function handleKeydown(event) {
   if (event.key === "Escape") {
@@ -45,7 +56,7 @@ function handleKeydown(event) {
   }
 
   if (event.key === "m" || event.key === "M") {
-    toggleAutoPlay(BOT_NAMES.CHAMPION);
+    toggleAutoPlay(getSecretBotName());
     return;
   }
   if (event.key === "x" || event.key === "X") {
@@ -198,6 +209,10 @@ dom.themeSelect.addEventListener("change", (event) => {
 
 dom.boardSizeSelect.addEventListener("change", (event) => {
   changeBoardSize(event.target.value);
+
+  if (secretModeEnabled) {
+    startAutoPlay(getSecretBotName());
+  }
 });
 
 dom.resetCurrentBoardBtn.addEventListener("click", () => {
@@ -231,7 +246,7 @@ let disableStep = "score";
 function enableSecretMode() {
   secretModeEnabled = true;
   console.log("Secret mode enabled!");
-  startAutoPlay(BOT_NAMES.CHAMPION);
+  startAutoPlay(getSecretBotName());
 }
 
 function disableSecretMode() {
