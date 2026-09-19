@@ -5,7 +5,7 @@ This notebook/script now keeps only the new large n-tuple track.
 Production local bot remains:
 
 ```txt
-js/ai/ntuple/ntupleWeights.js
+js/ai/models/ntupleWeights.js
 ntupleTdBeam2
 futureWeight = 0.49
 ```
@@ -13,8 +13,8 @@ futureWeight = 0.49
 For Colab, upload:
 
 ```txt
-js/ai/ntuple/train_ntuple_td.py
-js/ai/colab/trainSnakeColab.sh
+training/ntuple/train_ntuple_td.py
+training/colab/trainSnakeColab.sh
 ```
 
 to:

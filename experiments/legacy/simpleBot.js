@@ -1,4 +1,4 @@
-import { getValidMoves } from "./boardSimulator.js";
+import { getValidMoves } from "../../js/ai/core/boardSimulator.js";
 
 export function getRandomMove(board) {
   const validMoves = getValidMoves(board);

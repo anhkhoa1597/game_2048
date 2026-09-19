@@ -6,16 +6,16 @@ import {
 const { activeModelPath, copiedModelPath } = prepareNtupleBenchmarkModel();
 await printNtupleModelInfo(activeModelPath, copiedModelPath);
 
-const { BOT_NAMES } = await import("../botRegistry.js");
+const { BOT_NAMES } = await import("../../js/ai/botRegistry.js");
 const {
   runMultiSeedBenchmark,
   formatMultiSeedTable,
   printMultiSeedTileDistributions,
-} = await import("../seededBenchmark.js");
+} = await import("./seededBenchmark.js");
 
 const BOTS_TO_TEST = [
-  BOT_NAMES.NTUPLE_TD_V1,
-  BOT_NAMES.NTUPLE_TD_BEAM_2,
+  BOT_NAMES.BOT_01,
+  BOT_NAMES.BOT_02,
 ];
 
 const summaries = runMultiSeedBenchmark(BOTS_TO_TEST, {

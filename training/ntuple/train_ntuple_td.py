@@ -1498,7 +1498,7 @@ def parse_args():
     )
     parser.add_argument(
         "--output",
-        default="js/ai/ntuple/ntupleWeights.js",
+        default="js/ai/models/ntupleWeights.js",
     )
     parser.add_argument("--input-model", default="")
     return parser.parse_args()

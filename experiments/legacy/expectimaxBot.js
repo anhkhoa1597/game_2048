@@ -2,10 +2,10 @@ import {
   getDirectionalRandomTileBoards,
   getValidMoves,
   simulateMove,
-} from "./boardSimulator.js";
+} from "../../js/ai/core/boardSimulator.js";
 
-import { evaluateBoardWithWeights } from "./weightedEvaluator.js";
-import { CHAMPION_WEIGHTS } from "./trainedWeights.js";
+import { evaluateBoardWithWeights } from "../../js/ai/core/weightedEvaluator.js";
+import { CHAMPION_WEIGHTS } from "../../js/ai/models/trainedWeights.js";
 
 const SEARCH_DEPTH = 2;
 const GAME_OVER_PENALTY = 100000;

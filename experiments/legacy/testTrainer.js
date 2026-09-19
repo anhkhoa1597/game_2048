@@ -1,5 +1,5 @@
 import { trainWeights } from "./evolutionTrainer.js";
-import { CHAMPION_WEIGHTS } from "./trainedWeights.js";
+import { CHAMPION_WEIGHTS } from "../../js/ai/models/trainedWeights.js";
 
 const best = trainWeights({
   generations: 80,

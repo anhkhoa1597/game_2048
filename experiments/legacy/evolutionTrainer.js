@@ -1,15 +1,15 @@
-import { Env2048 } from "./env2048.js";
+import { Env2048 } from "../../js/ai/core/env2048.js";
 import {
   getWeightedDepthMove,
   getWeightedBeamDepthMove,
-} from "./weightedDepthBot.js";
+} from "../../js/ai/bots/weightedDepthBot.js";
 import {
   DEFAULT_WEIGHTS,
   createRandomWeights,
   mutateWeights,
   cloneWeights,
-} from "./weightedEvaluator.js";
-import { getMaxTile } from "./evaluator.js";
+} from "../../js/ai/core/weightedEvaluator.js";
+import { getMaxTile } from "../../js/ai/core/evaluator.js";
 import fs from "fs";
 function ensureDirectoryExists(directoryPath) {
   if (!fs.existsSync(directoryPath)) {

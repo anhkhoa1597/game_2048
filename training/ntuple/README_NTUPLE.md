@@ -5,19 +5,19 @@ Current production bot:
 ```txt
 ntupleTdBeam2
 futureWeight = 0.49
-weights = js/ai/ntuple/ntupleWeights.js
+weights = js/ai/models/ntupleWeights.js
 ```
 
 Quick benchmark:
 
 ```bash
-node js/ai/ntuple/testNtupleQuickBenchmark.js
+node tools/benchmark/testNtupleQuickBenchmark.js
 ```
 
 Benchmark another downloaded model:
 
 ```bash
-node js/ai/ntuple/testNtupleQuickBenchmark.js --model path/to/ntupleWeights.js
+node tools/benchmark/testNtupleQuickBenchmark.js --model path/to/ntupleWeights.js
 ```
 
 ## New Training Track
@@ -25,24 +25,24 @@ node js/ai/ntuple/testNtupleQuickBenchmark.js --model path/to/ntupleWeights.js
 The old `paper17`, `early2048`, and `auto-mix` experiments are intentionally retired. To chase stronger 16k/32k play, train a larger snake tuple model instead:
 
 ```bash
-EPISODES=10000 ./js/ai/ntuple/runSnakeLocal.sh
+EPISODES=10000 ./training/ntuple/runSnakeLocal.sh
 ```
 
 Default local output:
 
 ```txt
-js/ai/ntuple/local-run/models/ntupleWeights-snake6-td.js
+runs/ntuple/models/ntupleWeights-snake6-td.js
 ```
 
 Long runs should use Colab with:
 
 ```txt
-js/ai/colab/trainSnakeColab.sh
+training/colab/trainSnakeColab.sh
 ```
 
 Upload the current trainer to Drive:
 
 ```txt
-js/ai/ntuple/train_ntuple_td.py -> MyProjects/2048-ai/scripts/train_ntuple_td.py
-js/ai/colab/trainSnakeColab.sh -> MyProjects/2048-ai/scripts/trainSnakeColab.sh
+training/ntuple/train_ntuple_td.py -> MyProjects/2048-ai/scripts/train_ntuple_td.py
+training/colab/trainSnakeColab.sh -> MyProjects/2048-ai/scripts/trainSnakeColab.sh
 ```

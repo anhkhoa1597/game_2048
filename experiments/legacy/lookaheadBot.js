@@ -1,5 +1,5 @@
-import { getValidMoves, simulateMove } from "./boardSimulator.js";
-import { evaluateBoard } from "./evaluator.js";
+import { getValidMoves, simulateMove } from "../../js/ai/core/boardSimulator.js";
+import { evaluateBoard } from "../../js/ai/core/evaluator.js";
 
 export function getLookaheadMove(board) {
   const validMoves = getValidMoves(board);

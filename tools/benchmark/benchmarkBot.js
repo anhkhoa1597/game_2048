@@ -1,7 +1,7 @@
-import { Env2048 } from "./env2048.js";
-import { getMaxTile } from "./evaluator.js";
-import { getBotMove } from "./botRegistry.js";
-import { createSeededRandom } from "./random.js";
+import { Env2048 } from "../../js/ai/core/env2048.js";
+import { getMaxTile } from "../../js/ai/core/evaluator.js";
+import { getBotMove } from "../../js/ai/botRegistry.js";
+import { createSeededRandom } from "../../js/ai/core/random.js";
 
 export function playOneGame(botName, options = {}) {
   const { size = 4, maxSteps = 10000, random = Math.random } = options;

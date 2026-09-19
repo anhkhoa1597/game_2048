@@ -1,3 +1,5 @@
-js/ai/ml/afterstate-value-v1.jsonl
-js/ai/ml/move-policy-v1.jsonl
-js/ai/ml/move-ranking-v1.jsonl
+.DS_Store
+__pycache__/
+*.pyc
+runs/
+benchmark-results/

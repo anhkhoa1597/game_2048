@@ -1,4 +1,4 @@
-import { BOT_NAMES } from "./botRegistry.js";
+import { BOT_NAMES } from "../../js/ai/botRegistry.js";
 import {
   runMultiSeedBenchmark,
   formatMultiSeedTable,
@@ -6,7 +6,7 @@ import {
 } from "./seededBenchmark.js";
 import { saveBenchmarkReport } from "./benchmarkReporter.js";
 const BOTS_TO_TEST = [
-  BOT_NAMES.NTUPLE_TD_BEAM_2,
+  BOT_NAMES.BOT_02,
 ];
 
 const summaries = runMultiSeedBenchmark(BOTS_TO_TEST, {

@@ -1,11 +1,20 @@
-import { getValidMoves, simulateMove } from "../boardSimulator.js";
-import { NTUPLE_TD_V1 } from "./ntupleWeights.js";
+import { getValidMoves, simulateMove } from "../core/boardSimulator.js";
+import { NTUPLE_TD_V1 } from "../models/ntupleWeights.js";
 
 // export const DEFAULT_NTUPLE_FUTURE_WEIGHT = 0.72;
 export const DEFAULT_NTUPLE_FUTURE_WEIGHT = 0.49;
 const GAME_OVER_PENALTY = 100000;
 
 let cachedModel = null;
+let activeModel = NTUPLE_TD_V1;
+
+export function setNtupleModel(model) {
+  if (!model || !Array.isArray(model.patterns) || !Array.isArray(model.weights) || model.patterns.length !== model.weights.length) {
+    throw new Error("Invalid n-tuple model");
+  }
+  activeModel = model;
+  cachedModel = null;
+}
 
 function getTilePower(tile, maxTilePower) {
   if (tile === 0) {
@@ -38,7 +47,7 @@ function getTupleKey(values, pattern, encodingBase) {
 }
 
 function getModel() {
-  if (!NTUPLE_TD_V1) {
+  if (!activeModel) {
     return null;
   }
 
@@ -47,10 +56,10 @@ function getModel() {
   }
 
   cachedModel = {
-    encodingBase: NTUPLE_TD_V1.metadata?.encodingBase ?? 16,
-    maxTilePower: NTUPLE_TD_V1.metadata?.maxTilePower ?? 15,
-    patterns: NTUPLE_TD_V1.patterns,
-    weights: NTUPLE_TD_V1.weights.map((entries) => {
+    encodingBase: activeModel.metadata?.encodingBase ?? 16,
+    maxTilePower: activeModel.metadata?.maxTilePower ?? 15,
+    patterns: activeModel.patterns,
+    weights: activeModel.weights.map((entries) => {
       const map = new Map();
 
       for (const [key, value] of entries) {

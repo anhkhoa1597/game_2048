@@ -3,7 +3,7 @@ import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 
 const CURRENT_DIR = path.dirname(fileURLToPath(import.meta.url));
-const ACTIVE_MODEL_PATH = path.join(CURRENT_DIR, "ntupleWeights.js");
+const ACTIVE_MODEL_PATH = path.resolve(CURRENT_DIR, "../../js/ai/models/ntupleWeights.js");
 
 function parseModelPathArg() {
   const modelFlagIndex = process.argv.indexOf("--model");
@@ -33,12 +33,8 @@ export function prepareNtupleBenchmarkModel() {
 
   const copiedModelPath = sourcePath === ACTIVE_MODEL_PATH ? "" : sourcePath;
 
-  if (copiedModelPath) {
-    fs.copyFileSync(sourcePath, ACTIVE_MODEL_PATH);
-  }
-
   return {
-    activeModelPath: ACTIVE_MODEL_PATH,
+    activeModelPath: sourcePath,
     copiedModelPath,
   };
 }
@@ -46,11 +42,13 @@ export function prepareNtupleBenchmarkModel() {
 export async function printNtupleModelInfo(activeModelPath, copiedModelPath = "") {
   const modelUrl = `${pathToFileURL(activeModelPath).href}?t=${Date.now()}`;
   const { NTUPLE_TD_V1 } = await import(modelUrl);
+  const { setNtupleModel } = await import("../../js/ai/bots/ntuple.js");
+  setNtupleModel(NTUPLE_TD_V1);
   const metadata = NTUPLE_TD_V1.metadata || {};
 
   if (copiedModelPath) {
     console.log(`Using model file: ${copiedModelPath}`);
-    console.log(`Copied to active model: ${activeModelPath}`);
+    console.log("Benchmark model loaded in memory; game weights unchanged.");
   } else {
     console.log(`Using active model: ${activeModelPath}`);
   }

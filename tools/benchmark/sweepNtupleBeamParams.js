@@ -1,6 +1,6 @@
-import { Env2048 } from "../env2048.js";
-import { getMaxTile } from "../evaluator.js";
-import { createSeededRandom } from "../random.js";
+import { Env2048 } from "../../js/ai/core/env2048.js";
+import { getMaxTile } from "../../js/ai/core/evaluator.js";
+import { createSeededRandom } from "../../js/ai/core/random.js";
 import {
   prepareNtupleBenchmarkModel,
   printNtupleModelInfo,
@@ -9,7 +9,7 @@ import {
 const { activeModelPath, copiedModelPath } = prepareNtupleBenchmarkModel();
 await printNtupleModelInfo(activeModelPath, copiedModelPath);
 
-const { getNtupleTdBeamMove } = await import("./ntupleBot.js");
+const { getNtupleTdBeamMove } = await import("../../js/ai/bots/ntuple.js");
 
 function getArgValue(name, fallback) {
   const index = process.argv.indexOf(name);

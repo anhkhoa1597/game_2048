@@ -29,8 +29,8 @@ function getAutoPlayDelay(botName) {
   if (
     botName === BOT_NAMES.AUTO_STRONG ||
     botName === BOT_NAMES.CHAMPION ||
-    botName === BOT_NAMES.LEGACY_CHAMPION ||
-    botName === BOT_NAMES.NTUPLE_TD_BEAM_2
+    botName === BOT_NAMES.BOT_00 ||
+    botName === BOT_NAMES.BOT_02
   ) {
     return 180;
   }
@@ -40,8 +40,8 @@ function getAutoPlayDelay(botName) {
 
 function getSecretBotName() {
   return getBoardValues().length === 4
-    ? BOT_NAMES.NTUPLE_TD_BEAM_2
-    : BOT_NAMES.LEGACY_CHAMPION;
+    ? BOT_NAMES.BOT_02
+    : BOT_NAMES.BOT_00;
 }
 function handleKeydown(event) {
   if (event.key === "Escape") {

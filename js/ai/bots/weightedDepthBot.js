@@ -1,8 +1,8 @@
-import { getValidMoves, simulateMove } from "./boardSimulator.js";
+import { getValidMoves, simulateMove } from "../core/boardSimulator.js";
 import {
   DEFAULT_WEIGHTS,
   evaluateBoardWithWeights,
-} from "./weightedEvaluator.js";
+} from "../core/weightedEvaluator.js";
 
 const FUTURE_WEIGHT = 0.75;
 
